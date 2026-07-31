@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Monterotondo Hub - [TITOLO MAPPA]</title>
+
+<meta property="og:title" content="Monterotondo Hub - [TITOLO MAPPA]" />
+<meta property="og:description" content="[DESCRIZIONE BREVE DEL DATASET]" />
+<meta property="og:site_name" content="Monterotondo Hub" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+<style>
+  html, body, #map { height: 100%; margin: 0; padding: 0; font-family: sans-serif; }
+  .info-box {
+    position: absolute; bottom: 10px; left: 10px; z-index: 1000;
+    background: rgba(255,255,255,0.9); padding: 6px 10px; font-size: 12px;
+    border-radius: 4px; max-width: 280px;
+  }
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+<div class="info-box">
+  Dati: <a href="[FONTE_DATI_URL]" target="_blank">[FONTE_DATI_NOME]</a> —
+  Struttura ispirata a <a href="https://github.com/SiciliaHub/palermohub" target="_blank">PalermoHub</a>
+  (CC BY-SA 4.0) di OpenDataSicilia.it
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
+<!-- script dati mappa: generato da QGIS2Web, var GeoJSON embedded -->
+<script src="data/layer_principale_0.js"></script>
+
+<script>
+  var map = L.map('map').setView([42.0505, 12.6187], 13); // Monterotondo
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // La variabile qui sotto (es. "json_layer_principale_0") è quella generata
+  // automaticamente da QGIS2Web nel file data/layer_principale_0.js
+  var layer = L.geoJSON(json_layer_principale_0, {
+    style: function (feature) {
+      return { color: '#3388ff', weight: 2, fillOpacity: 0.3 };
+    },
+    onEachFeature: function (feature, layer) {
+      if (feature.properties) {
+        var popup = Object.entries(feature.properties)
+          .map(function (kv) { return '<b>' + kv[0] + ':</b> ' + kv[1]; })
+          .join('<br>');
+        layer.bindPopup(popup);
+      }
+    }
+  }).addTo(map);
+
+  map.fitBounds(layer.getBounds());
+</script>
+
+</body>
+</html>
