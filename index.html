@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lazio Hub — Mappe civiche dal territorio</title>
+<meta property="og:title" content="Lazio Hub — Mappe civiche dal territorio" />
+<meta property="og:description" content="Un atlante di mappe interattive su Monterotondo e il Lazio, costruite da dati aperti." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #1C2B24;
+    --paper: #F2EDE4;
+    --brick: #B23A2E;
+    --sage: #5C7A6B;
+    --stone: #8A8577;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    position: relative;
+    background: var(--ink);
+    color: var(--paper);
+    overflow: hidden;
+    padding: 0 24px;
+  }
+
+  .hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 96px 0 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .coords {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--sage);
+    margin: 0 0 20px;
+  }
+
+  .coords::before { content: "◎  "; color: var(--brick); }
+
+  h1.title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(48px, 9vw, 96px);
+    line-height: 0.98;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+
+  h1.title .accent {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--brick);
+  }
+
+  .hero-sub {
+    font-size: clamp(16px, 2vw, 19px);
+    max-width: 46ch;
+    color: #CBD3CD;
+    line-height: 1.55;
+    margin: 24px 0 0;
+  }
+
+  .hero-sub strong { color: var(--paper); font-weight: 600; }
+
+  #crosshair {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+  }
+  #crosshair svg { width: 100%; height: 100%; }
+  #crosshair line, #crosshair circle {
+    stroke: var(--brick);
+    stroke-width: 1;
+    fill: none;
+  }
+
+  .hero-grid-lines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(242,237,228,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(242,237,228,0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    z-index: 0;
+  }
+
+  /* ---------- CATALOG ---------- */
+
+  .catalog {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 64px 24px 40px;
+  }
+
+  .catalog-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 14px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .catalog-head h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .catalog-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--stone);
+  }
+
+  .map-list { display: grid; gap: 0; }
+
+  .map-entry {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 4px;
+    border-bottom: 1px solid rgba(28,43,36,0.14);
+    text-decoration: none;
+    color: var(--ink);
+    transition: padding-left 0.2s ease, background 0.2s ease;
+  }
+
+  .map-entry:hover { padding-left: 12px; background: rgba(178,58,46,0.04); }
+  .map-entry:hover .map-title { color: var(--brick); }
+  .map-entry:hover .map-arrow { transform: translateX(4px); opacity: 1; }
+
+  .map-index {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--stone);
+  }
+
+  .map-title {
+    font-family: 'Fraunces', serif;
+    font-size: 21px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .map-meta {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--stone);
+    font-weight: 400;
+    margin-top: 3px;
+  }
+
+  .map-arrow {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--sage);
+    opacity: 0.5;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .empty-note {
+    padding: 28px 4px;
+    color: var(--stone);
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  /* ---------- ABOUT STRIP ---------- */
+
+  .about {
+    max-width: 960px;
+    margin: 40px auto 0;
+    padding: 32px 24px 0;
+    border-top: 1px solid rgba(28,43,36,0.14);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .about h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--sage);
+    margin: 0 0 10px;
+  }
+
+  .about p { font-size: 14px; line-height: 1.6; color: var(--ink); margin: 0; }
+
+  @media (max-width: 640px) {
+    .about { grid-template-columns: 1fr; }
+    .map-entry { grid-template-columns: 40px 1fr auto; }
+  }
+
+  footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    font-size: 12px;
+    color: var(--stone);
+    line-height: 1.7;
+  }
+
+  footer a { color: var(--brick); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-grid-lines"></div>
+  <div id="crosshair">
+    <svg viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="36" />
+      <circle cx="60" cy="60" r="3" fill="#B23A2E" stroke="none" />
+      <line x1="60" y1="0" x2="60" y2="30" />
+      <line x1="60" y1="90" x2="60" y2="120" />
+      <line x1="0" y1="60" x2="30" y2="60" />
+      <line x1="90" y1="60" x2="120" y2="60" />
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <p class="coords">42.0505° N, 12.6187° E — Monterotondo, Lazio</p>
+    <h1 class="title">Lazio<br><span class="accent">Hub</span></h1>
+    <p class="hero-sub">
+      Un atlante di mappe civiche costruite da dati aperti: <strong>seggi elettorali</strong>,
+      confini amministrativi, territorio. Con focus su <strong>Monterotondo</strong>,
+      per rendere leggibile quello che di solito resta chiuso in un PDF comunale.
+    </p>
+  </div>
+</div>
+
+<div class="catalog">
+  <div class="catalog-head">
+    <h2>Catalogo mappe</h2>
+    <span class="catalog-count">01 disponibile</span>
+  </div>
+
+  <div class="map-list">
+    <a class="map-entry" href="seggi_elettorali.html">
+      <span class="map-index">01</span>
+      <span>
+        <span class="map-title">Seggi elettorali di Monterotondo</span>
+        <span class="map-meta">Geocodifica da OpenStreetMap / Overpass — poligoni di sezione</span>
+      </span>
+      <span class="map-arrow">→</span>
+    </a>
+
+    <div class="empty-note">Altre mappe in lavorazione — confini comunali, PRG, dati censuari.</div>
+  </div>
+</div>
+
+<div class="about">
+  <div>
+    <h3>Cos'è</h3>
+    <p>
+      Lazio Hub raccoglie rielaborazioni di dati pubblici e open data sul territorio
+      laziale, con un'attenzione particolare al comune di Monterotondo. Ogni mappa è
+      una pagina indipendente, costruita in QGIS ed esportata per il web.
+    </p>
+  </div>
+  <div>
+    <h3>Ispirazione</h3>
+    <p>
+      Il progetto è ispirato nella struttura a
+      <a href="https://github.com/SiciliaHub/palermohub" target="_blank">PalermoHub</a>
+      di OpenDataSicilia.it, rilasciato con licenza CC BY-SA 4.0.
+      Nessun dato di PalermoHub è riutilizzato qui: solo l'approccio.
+    </p>
+  </div>
+</div>
+
+<footer>
+  Codice rilasciato in CC BY-SA 4.0. I dati mantengono la licenza della fonte originale,
+  citata su ogni singola mappa.
+</footer>
+
+<script>
+  const crosshair = document.getElementById('crosshair');
+  const hero = document.querySelector('.hero');
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    crosshair.style.left = (e.clientX - rect.left - 60) + 'px';
+    crosshair.style.top = (e.clientY - rect.top - 60) + 'px';
+    crosshair.style.opacity = '0.6';
+  });
+  hero.addEventListener('mouseleave', () => {
+    crosshair.style.opacity = '0.35';
+  });
+  crosshair.style.left = 'calc(50% - 60px)';
+  crosshair.style.top = '40px';
+</script>
+
+</body>
+</html>
