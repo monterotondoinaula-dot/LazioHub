@@ -18,6 +18,7 @@
     --brick: #B23A2E;
     --sage: #5C7A6B;
     --stone: #8A8577;
+    --card-bg: #FFFFFF;
   }
 
   * { box-sizing: border-box; }
@@ -116,7 +117,7 @@
   /* ---------- CATALOG ---------- */
 
   .catalog {
-    max-width: 960px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 64px 24px 40px;
   }
@@ -145,64 +146,156 @@
     color: var(--stone);
   }
 
-  .map-list { display: grid; gap: 0; }
+  /* ---------- CARD GRID ---------- */
 
-  .map-entry {
+  .map-grid {
     display: grid;
-    grid-template-columns: 64px 1fr auto;
-    align-items: center;
-    gap: 20px;
-    padding: 22px 4px;
-    border-bottom: 1px solid rgba(28,43,36,0.14);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  @media (max-width: 720px) {
+    .map-grid { grid-template-columns: 1fr; }
+  }
+
+  .map-card {
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: var(--ink);
-    transition: padding-left 0.2s ease, background 0.2s ease;
+    background: var(--card-bg);
+    border: 1px solid rgba(28,43,36,0.14);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   }
 
-  .map-entry:hover { padding-left: 12px; background: rgba(178,58,46,0.04); }
-  .map-entry:hover .map-title { color: var(--brick); }
-  .map-entry:hover .map-arrow { transform: translateX(4px); opacity: 1; }
+  .map-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(28,43,36,0.14);
+    border-color: var(--brick);
+  }
 
-  .map-index {
+  .map-card-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--ink);
+    overflow: hidden;
+  }
+
+  .map-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+
+  .map-card:hover .map-card-media img { transform: scale(1.05); }
+
+  .map-card-index {
+    position: absolute;
+    top: 12px;
+    left: 12px;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    color: var(--stone);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--paper);
+    background: rgba(28,43,36,0.55);
+    padding: 3px 8px;
+    backdrop-filter: blur(2px);
   }
 
-  .map-title {
+  .map-card-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--paper);
+    background: var(--brick);
+    padding: 3px 8px;
+  }
+
+  .map-card-body {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .map-card-title {
     font-family: 'Fraunces', serif;
     font-size: 21px;
     font-weight: 500;
+    line-height: 1.2;
     transition: color 0.2s ease;
   }
 
-  .map-meta {
-    display: block;
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    color: var(--stone);
-    font-weight: 400;
-    margin-top: 3px;
+  .map-card:hover .map-card-title { color: var(--brick); }
+
+  .map-card-desc {
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.5;
+    opacity: 0.85;
+    flex: 1;
   }
 
-  .map-arrow {
+  .map-card-meta {
     font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--stone);
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .map-card-arrow {
     color: var(--sage);
-    opacity: 0.5;
+    opacity: 0.6;
     transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
-  .empty-note {
-    padding: 28px 4px;
-    color: var(--stone);
-    font-size: 14px;
-    font-style: italic;
+  .map-card:hover .map-card-arrow { transform: translateX(4px); opacity: 1; color: var(--brick); }
+
+  /* ---------- CARD "IN LAVORAZIONE" (placeholder, non cliccabile) ---------- */
+
+  .map-card.placeholder {
+    cursor: default;
+    opacity: 0.6;
   }
+
+  .map-card.placeholder:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(28,43,36,0.14);
+  }
+
+  .map-card.placeholder .map-card-media {
+    background: repeating-linear-gradient(45deg, #e3ddcf, #e3ddcf 10px, #ded6c4 10px, #ded6c4 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .map-card.placeholder .map-card-media span {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--stone);
+  }
+
+  .map-card.placeholder .map-card-title { color: var(--stone); }
 
   /* ---------- ABOUT STRIP ---------- */
 
   .about {
-    max-width: 960px;
+    max-width: 1040px;
     margin: 40px auto 0;
     padding: 32px 24px 0;
     border-top: 1px solid rgba(28,43,36,0.14);
@@ -224,11 +317,10 @@
 
   @media (max-width: 640px) {
     .about { grid-template-columns: 1fr; }
-    .map-entry { grid-template-columns: 40px 1fr auto; }
   }
 
   footer {
-    max-width: 960px;
+    max-width: 1040px;
     margin: 0 auto;
     padding: 40px 24px 60px;
     font-size: 12px;
@@ -260,7 +352,7 @@
     <p class="hero-sub">
       Un atlante di mappe civiche costruite da dati aperti: <strong>seggi elettorali</strong>,
       confini amministrativi, territorio. Con focus su <strong>Monterotondo</strong>,
-      per rendere leggibile quello che di solito resta chiuso in un PDF comunale.
+      per rendere leggibile quello che di solito resta chiuso. Il tutto ispirato dal lavoro dei creatori di PalermoHub
     </p>
   </div>
 </div>
@@ -268,20 +360,55 @@
 <div class="catalog">
   <div class="catalog-head">
     <h2>Catalogo mappe</h2>
-    <span class="catalog-count">01 disponibile</span>
+    <span class="catalog-count">02 disponibili</span>
   </div>
 
-  <div class="map-list">
-    <a class="map-entry" href="stress_idrico_comuni.html">
-      <span class="map-index">01</span>
-      <span>
-        <span class="map-title">Stress idrico dei comuni del Lazio</span>
-        <span class="map-meta">Geocodifica da Terraclimate e Claude — confini comuni da Openpolis</span>
-      </span>
-      <span class="map-arrow">→</span>
+  <div class="map-grid">
+
+    <a class="map-card" href="stress_idrico_comuni.html">
+      <div class="map-card-media">
+        <span class="map-card-index">01</span>
+        <span class="map-card-tag">Clima</span>
+        <img src="img/thumb_stress_idrico.jpg" alt="Anteprima mappa stress idrico dei comuni del Lazio" loading="lazy">
+      </div>
+      <div class="map-card-body">
+        <div class="map-card-title">Stress idrico dei comuni del Lazio</div>
+        <p class="map-card-desc">Mappa coropletica regionale che confronta il bilancio idroclimatico
+        di ogni comune, per capire dove il territorio è più sotto pressione.</p>
+        <div class="map-card-meta">
+          <span>Terraclimate · Openpolis</span>
+          <span class="map-card-arrow">→</span>
+        </div>
+      </div>
     </a>
 
-    <div class="empty-note">Altre mappe in lavorazione — confini comunali, PRG, dati censuari.</div>
+    <a class="map-card" href="monterotondo-dtm5m/index.html">
+      <div class="map-card-media">
+        <span class="map-card-index">02</span>
+        <span class="map-card-tag">Territorio</span>
+        <img src="img/thumb_monterotondo.jpg" alt="Anteprima mappa altimetrica DTM 5m di Monterotondo" loading="lazy">
+      </div>
+      <div class="map-card-body">
+        <div class="map-card-title">Monterotondo — Analisi morfologica DTM 5m</div>
+        <p class="map-card-desc">9 layer derivati dal Modello Digitale del Terreno a 5 metri:
+        pendenze, esposizione, geomorfologia, stabilità dei versanti, costruibilità e radiazione solare.</p>
+        <div class="map-card-meta">
+          <span>HR-DTM 5m · ISTAT</span>
+          <span class="map-card-arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="map-card placeholder">
+      <div class="map-card-media"><span>In lavorazione</span></div>
+      <div class="map-card-body">
+        <div class="map-card-title">Confini comunali e PRG</div>
+        <p class="map-card-desc">Prossima pubblicazione: sovrapposizione tra strumento urbanistico
+        vigente e uso reale del suolo.</p>
+        <div class="map-card-meta"><span>—</span></div>
+      </div>
+    </div>
+
   </div>
 </div>
 
