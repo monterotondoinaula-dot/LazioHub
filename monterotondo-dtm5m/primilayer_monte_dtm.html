@@ -149,6 +149,13 @@ const leafletBounds = [[BOUNDS.lat_min, BOUNDS.lon_min],[BOUNDS.lat_max, BOUNDS.
 
 const map = L.map('map', { zoomControl: true, attributionControl: false }).fitBounds(leafletBounds);
 
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.control.attribution({ position: 'bottomright' }).addTo(map);
+
 const LAYER_META = {
   elevazione: {
     title: "Elevazione", desc: "Quota del terreno rispetto al livello del mare.",
