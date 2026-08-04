@@ -1,0 +1,99 @@
+{
+  "comune": "Monterotondo",
+  "metodologia": "v2 - Horn algorithm (pendenza/esposizione), Zevenbergen-Thorne (curvatura), gaussian smoothing sigma=1px",
+  "area_km2": 40.8,
+  "elevazione": {
+    "min": 16.2,
+    "max": 192.1,
+    "media": 72.1,
+    "std": 40.6,
+    "distribuzione_pct": {
+      "0-50 m": 38.5,
+      "50-100 m": 30.7,
+      "100-150 m": 28.2,
+      "150-200 m": 2.7,
+      ">200 m": 0.0
+    }
+  },
+  "pendenza": {
+    "media_deg": 6.94,
+    "max_deg": 82.77,
+    "std_deg": 7.23,
+    "distribuzione_pct": {
+      "0-5 pianura": 47.0,
+      "5-15 moderata": 43.7,
+      "15-30 acclive": 8.4,
+      "30-45 molto acclive": 0.3,
+      ">45 subverticale": 0.6
+    }
+  },
+  "esposizione": {
+    "distribuzione_pct": {
+      "Pianura (nessuna esp. netta)": 25.4,
+      "Nord": 5.8,
+      "Nord-Est": 5.3,
+      "Est": 9.0,
+      "Sud-Est": 11.3,
+      "Sud": 10.2,
+      "Sud-Ovest": 10.4,
+      "Ovest": 13.1,
+      "Nord-Ovest": 9.3
+    },
+    "dominante": "Ovest"
+  },
+  "rugosita_tri": {
+    "media": 1.65,
+    "max": 95.16,
+    "distribuzione_pct": {
+      "0-1 pianura": 43.9,
+      "1-5 ondulato": 54.2,
+      "5-10 collinare": 1.2,
+      "10-25 accidentato": 0.4,
+      ">25 molto accidentato": 0.4
+    }
+  },
+  "curvatura": {
+    "planare_media": 0.0001,
+    "profilo_media": -0.0009,
+    "totale_media": -0.0008
+  },
+  "geomorfologia": {
+    "distribuzione_pct": {
+      "Pianura/fondovalle": 32.6,
+      "Versante": 44.9,
+      "Cresta/dorsale": 11.2,
+      "Valle/impluvio": 10.5,
+      "Depressione chiusa": 0.8
+    }
+  },
+  "stabilita_versanti": {
+    "distribuzione_pct": {
+      "Molto stabile": 55.2,
+      "Stabile": 29.8,
+      "Moderatamente instabile": 10.9,
+      "Instabile": 2.5,
+      "Molto instabile": 1.7
+    },
+    "pct_a_rischio_cl3_5": 15.1
+  },
+  "costruibilita": {
+    "distribuzione_pct": {
+      "Ottima": 57.1,
+      "Buona": 29.3,
+      "Moderata": 10.5,
+      "Scarsa": 2.0,
+      "Critica": 1.1
+    },
+    "pct_critica_cl4_5": 3.1
+  },
+  "radiazione_solare": {
+    "media_sri": 0.52,
+    "distribuzione_pct": {
+      "0,0-0,3 molto bassa": 0.2,
+      "0,3-0,5 bassa": 43.2,
+      "0,5-0,65 media": 38.7,
+      "0,65-0,8 alta": 18.0,
+      "0,8-1,0 molto alta": 0.0
+    }
+  }
+}
