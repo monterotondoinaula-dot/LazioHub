@@ -62,6 +62,24 @@
 
   .note{ font-size: 0.76rem; color: var(--ink-soft); line-height: 1.5; }
 
+  #quartieri-toggle-row{ display:flex; align-items:center; gap:0.5rem; margin: 0.9rem 0 0.3rem; padding-top: 0.8rem; border-top: 1px dashed var(--line); font-family: var(--mono); font-size: 0.76rem; }
+  #quartieri-toggle-row label{ cursor:pointer; user-select:none; }
+
+  .quartiere-badge{
+    display:inline-block; font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase;
+    letter-spacing: 0.05em; background: #3d5c46; color: var(--paper); padding: 2px 7px; margin-bottom: 0.5rem;
+  }
+  #back-to-comune{
+    display:none; font-family: var(--mono); font-size: 0.7rem; background: transparent; border: 1px solid var(--line);
+    color: var(--ink-soft); padding: 0.3rem 0.6rem; cursor: pointer; margin-bottom: 0.6rem;
+  }
+  #back-to-comune:hover{ border-color: var(--accent); color: var(--accent); }
+
+  .leaflet-popup-content-wrapper{ background: var(--paper); border: 1px solid var(--line); border-radius: 0; }
+  .leaflet-popup-content{ font-family: var(--serif); font-size: 0.82rem; margin: 0.6rem 0.8rem; }
+  .leaflet-popup-content b{ color: var(--accent); }
+  .leaflet-popup-tip{ background: var(--paper); }
+
   footer{ max-width: 1280px; margin: 0 auto; padding: 1.2rem 2rem 2.4rem; font-family: var(--mono); font-size: 0.7rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
   footer a{ color: #6e4a1e; }
 </style>
@@ -71,7 +89,7 @@
 <header>
   <div class="eyebrow">Cruscotto civico &middot; Monterotondo (RM) &middot; HR-DTM 5m</div>
   <h1>Analisi morfologica del territorio comunale</h1>
-  <p class="subtitle">9 layer derivati dal Modello Digitale del Terreno ad alta risoluzione (5 m/pixel), calcolati sul confine amministrativo ufficiale. Metodologia: algoritmo di Horn per pendenza/esposizione, curvatura di Zevenbergen-Thorne, indici morfologici compositi ispirati al progetto <a href="https://palermohub.github.io/Palerm-DTM-5m/" target="_blank" style="color:#8a2b1f;">Palermo Hub</a>.</p>
+  <p class="subtitle">9 layer derivati dal Modello Digitale del Terreno ad alta risoluzione (5 m/pixel), calcolati sul confine amministrativo ufficiale e aggregati sui 17 quartieri comunali (sezioni censuarie ISTAT 2021). Clicca un quartiere sulla mappa per vederne le statistiche. Metodologia: algoritmo di Horn per pendenza/esposizione, curvatura di Zevenbergen-Thorne, indici morfologici compositi ispirati al progetto <a href="https://palermohub.github.io/Palerm-DTM-5m/" target="_blank" style="color:#8a2b1f;">Palermo Hub</a>.</p>
 </header>
 
 <main>
@@ -96,12 +114,18 @@
       <span>opacità</span>
       <input type="range" id="opacity-slider" min="0.2" max="1" step="0.05" value="0.85">
     </div>
+    <div id="quartieri-toggle-row">
+      <input type="checkbox" id="quartieri-toggle" checked>
+      <label for="quartieri-toggle">mostra confini quartieri</label>
+    </div>
   </div>
 
   <div id="map"></div>
 
   <aside>
     <div class="panel">
+      <button id="back-to-comune">← torna al dato comunale</button>
+      <div id="quartiere-badge-row"></div>
       <h2 id="stat-title-label">Statistiche — Elevazione</h2>
       <div id="bigstats" class="bigstat"></div>
       <div id="stat-desc"></div>
@@ -109,7 +133,7 @@
     </div>
     <div class="panel">
       <h2>Nota metodologica</h2>
-      <p class="note" id="note-text">Calcolato dal raster DTM 5m grezzo, ritagliato sul confine ISTAT del comune (40,80 km²). Indici compositi (stabilità, costruibilità, radiazione) sono stime semplificate — non sostituiscono studi geologici o energetici certificati.</p>
+      <p class="note" id="note-text">Calcolato dal raster DTM 5m grezzo, ritagliato sul confine ISTAT del comune (40,80 km²). Confini dei 17 quartieri da sezioni censuarie ISTAT 2021 (dissolte). Le statistiche per quartiere sono medie/percentuali zonali del raster comunale. Indici compositi (stabilità, costruibilità, radiazione) sono stime semplificate — non sostituiscono studi geologici o energetici certificati.</p>
     </div>
   </aside>
 </main>
@@ -172,18 +196,32 @@ const LAYER_META = {
   },
 };
 
+// mappa layer attivo -> campo del quartiere da usare quando si clicca un poligono
+const QUARTIERE_FIELD = {
+  elevazione: { field: 'elevazione_media', label: 'Elevazione media', unit: ' m' },
+  pendenza: { field: 'pendenza_media', label: 'Pendenza media', unit: '°' },
+  rugosita: { field: 'rugosita_media', label: 'Rugosità media (TRI)', unit: '' },
+  stabilita: { field: 'stabilita_media', label: 'Stabilità versanti media', unit: ' /5' },
+  costruibilita: { field: 'costruibilita_media', label: 'Costruibilità media', unit: ' /5' },
+  radiazione: { field: 'radiazione_media', label: 'Radiazione solare media (SRI)', unit: '' },
+};
+
 let dati = null;
 let currentOverlay = null;
+let currentLayerName = 'elevazione';
+let quartieriLayer = null;
+let selectedQuartiere = null;
 
 function loadOverlay(name) {
   if (currentOverlay) map.removeLayer(currentOverlay);
   const opacity = parseFloat(document.getElementById('opacity-slider').value);
   currentOverlay = L.imageOverlay('layers/' + name + '.png', leafletBounds, { opacity: opacity }).addTo(map);
+  if (quartieriLayer) quartieriLayer.bringToFront();
 }
 
-function renderStats(name) {
+function renderStatsComune(name) {
   const meta = LAYER_META[name];
-  document.getElementById('stat-title-label').textContent = 'Statistiche — ' + meta.title;
+  document.getElementById('stat-title-label').textContent = 'Statistiche comunali — ' + meta.title;
   document.getElementById('stat-desc').textContent = meta.desc;
 
   const bigDiv = document.getElementById('bigstats');
@@ -211,10 +249,70 @@ function renderStats(name) {
   }
 }
 
+function renderStatsQuartiere(props) {
+  document.getElementById('stat-title-label').textContent = 'Quartiere — ' + props.nome;
+  document.getElementById('stat-desc').textContent = 'Valori medi calcolati sul poligono del quartiere (zonal statistics sul raster comunale).';
+
+  const bigDiv = document.getElementById('bigstats');
+  bigDiv.innerHTML = '';
+  const meta = QUARTIERE_FIELD[currentLayerName];
+  if (meta) {
+    const val = props[meta.field];
+    const d = document.createElement('div');
+    d.innerHTML = `<div class="val">${val !== null && val !== undefined ? val + meta.unit : 'n/d'}</div><div class="lbl">${meta.label}</div>`;
+    bigDiv.appendChild(d);
+  }
+
+  const table = document.getElementById('stat-table');
+  table.innerHTML = '';
+  const rows = [
+    ['Popolazione (ISTAT 2021)', props.popolazione],
+    ['Famiglie', props.famiglie],
+    ['Edifici', props.edifici],
+    ['Elevazione media', props.elevazione_media + ' m'],
+    ['Pendenza media', props.pendenza_media + '°'],
+    ['Rugosità media (TRI)', props.rugosita_media],
+    ['Stabilità versanti (1-5)', props.stabilita_media],
+    ['Costruibilità (1-5)', props.costruibilita_media],
+    ['Radiazione solare (SRI)', props.radiazione_media],
+    ['Geomorfologia dominante', props.geomorfologia_dominante],
+  ];
+  rows.forEach(([label, val]) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${label}</td><td>${val ?? 'n/d'}</td>`;
+    table.appendChild(tr);
+  });
+}
+
+function selectQuartiere(layer, props) {
+  if (selectedQuartiere) selectedQuartiere.setStyle(quartiereBaseStyle);
+  selectedQuartiere = layer;
+  layer.setStyle({ weight: 3, color: '#8a2b1f', fillOpacity: 0.12 });
+
+  document.getElementById('back-to-comune').style.display = 'inline-block';
+  document.getElementById('quartiere-badge-row').innerHTML = `<span class="quartiere-badge">${props.nome}</span>`;
+  renderStatsQuartiere(props);
+}
+
+function deselectQuartiere() {
+  if (selectedQuartiere) selectedQuartiere.setStyle(quartiereBaseStyle);
+  selectedQuartiere = null;
+  document.getElementById('back-to-comune').style.display = 'none';
+  document.getElementById('quartiere-badge-row').innerHTML = '';
+  renderStatsComune(currentLayerName);
+}
+
+const quartiereBaseStyle = { color: '#3d5c46', weight: 1.4, opacity: 0.85, fillOpacity: 0.02, dashArray: '4,3' };
+
 function selectLayer(name) {
+  currentLayerName = name;
   document.querySelectorAll('.layer-btn').forEach(b => b.classList.toggle('active', b.dataset.layer === name));
   loadOverlay(name);
-  renderStats(name);
+  if (selectedQuartiere && selectedQuartiere.feature) {
+    renderStatsQuartiere(selectedQuartiere.feature.properties);
+  } else {
+    renderStatsComune(name);
+  }
 }
 
 document.querySelectorAll('.layer-btn').forEach(btn => {
@@ -223,12 +321,32 @@ document.querySelectorAll('.layer-btn').forEach(btn => {
 document.getElementById('opacity-slider').addEventListener('input', () => {
   if (currentOverlay) currentOverlay.setOpacity(parseFloat(document.getElementById('opacity-slider').value));
 });
+document.getElementById('back-to-comune').addEventListener('click', deselectQuartiere);
+document.getElementById('quartieri-toggle').addEventListener('change', (e) => {
+  if (!quartieriLayer) return;
+  if (e.target.checked) { quartieriLayer.addTo(map); } else { map.removeLayer(quartieriLayer); }
+});
 
 fetch('dati.json')
   .then(r => r.json())
   .then(d => {
     dati = d;
     selectLayer('elevazione');
+  });
+
+fetch('quartieri.geojson')
+  .then(r => r.json())
+  .then(geo => {
+    quartieriLayer = L.geoJSON(geo, {
+      style: quartiereBaseStyle,
+      onEachFeature: (feature, layer) => {
+        const p = feature.properties;
+        layer.bindTooltip(p.nome, { sticky: true, className: 'quartiere-tooltip' });
+        layer.on('click', () => selectQuartiere(layer, p));
+        layer.on('mouseover', () => { if (layer !== selectedQuartiere) layer.setStyle({ weight: 2.2, fillOpacity: 0.08 }); });
+        layer.on('mouseout', () => { if (layer !== selectedQuartiere) layer.setStyle(quartiereBaseStyle); });
+      }
+    }).addTo(map);
   });
 </script>
 
