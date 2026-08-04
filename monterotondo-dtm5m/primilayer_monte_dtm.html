@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monterotondo — Analisi morfologica DTM 5m</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+<style>
+  :root{
+    --ink:#2b2621;
+    --ink-soft:#5a5147;
+    --paper:#f2ece0;
+    --paper-deep:#e6ddc9;
+    --line:#c9bd9f;
+    --accent:#8a2b1f;
+    --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    --serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html,body{ margin:0; padding:0; background: var(--paper); color: var(--ink); font-family: var(--serif); }
+  body{ background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px); }
+
+  header{ padding: 2rem 2rem 1.2rem; border-bottom: 1px solid var(--line); max-width: 1280px; margin: 0 auto; }
+  .eyebrow{ font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: #6e4a1e; display:flex; gap: 0.6rem; align-items: center; }
+  .eyebrow::before{ content:""; display:inline-block; width: 22px; height: 1px; background: #6e4a1e; }
+  h1{ font-weight: 600; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 0.5rem 0 0.3rem; letter-spacing: -0.01em; line-height: 1.15; }
+  .subtitle{ color: var(--ink-soft); font-size: 0.95rem; max-width: 70ch; line-height: 1.5; }
+
+  main{ max-width: 1280px; margin: 0 auto; padding: 1.4rem 2rem 3rem; display: grid; grid-template-columns: 260px 1fr 300px; gap: 1.2rem; }
+  @media (max-width: 1000px){ main{ grid-template-columns: 1fr; } }
+
+  .panel{ border: 1px solid var(--line); background: rgba(255,255,255,0.35); padding: 0.9rem 1rem; }
+  .panel h2{ font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.13em; text-transform: uppercase; margin: 0 0 0.6rem; color: #6e4a1e; }
+
+  #layer-list{ display:flex; flex-direction:column; gap: 0.3rem; }
+  .layer-btn{
+    font-family: var(--serif); font-size: 0.88rem; text-align:left; padding: 0.5rem 0.6rem;
+    background: transparent; border: 1px solid transparent; cursor: pointer; color: var(--ink);
+    border-radius: 2px;
+  }
+  .layer-btn:hover{ background: var(--paper-deep); }
+  .layer-btn.active{ background: var(--accent); color: var(--paper); font-weight: 600; }
+  .layer-group-label{ font-family: var(--mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); margin: 0.7rem 0 0.15rem; }
+  .layer-group-label:first-child{ margin-top: 0; }
+
+  #map{ height: 660px; border: 1px solid var(--line); background: var(--paper-deep); }
+  .leaflet-container{ background: var(--paper-deep); font-family: var(--serif); }
+
+  #opacity-row{ display:flex; align-items:center; gap:0.5rem; margin-top:0.8rem; font-family: var(--mono); font-size: 0.72rem; color: var(--ink-soft); }
+  #opacity-row input{ flex:1; }
+
+  aside{ display:flex; flex-direction:column; gap: 1rem; }
+  #stat-title{ font-weight:600; font-size:1.05rem; margin:0 0 0.3rem; color: var(--accent); }
+  #stat-desc{ font-size: 0.85rem; line-height:1.5; color: var(--ink-soft); margin-bottom: 0.7rem; }
+  #stat-table{ width:100%; border-collapse: collapse; font-family: var(--mono); font-size: 0.76rem; }
+  #stat-table td{ padding: 0.25rem 0.2rem; border-bottom: 1px dotted var(--line); }
+  #stat-table td:last-child{ text-align:right; font-weight:600; }
+  .bigstat{ display:flex; gap: 0.8rem; margin-bottom: 0.6rem; }
+  .bigstat div{ flex:1; text-align:center; border: 1px solid var(--line); padding: 0.5rem 0.2rem; }
+  .bigstat .val{ font-family: var(--mono); font-size: 1.3rem; font-weight:700; color: var(--accent); }
+  .bigstat .lbl{ font-family: var(--mono); font-size: 0.62rem; text-transform:uppercase; color: var(--ink-soft); margin-top:0.15rem; }
+
+  .note{ font-size: 0.76rem; color: var(--ink-soft); line-height: 1.5; }
+
+  footer{ max-width: 1280px; margin: 0 auto; padding: 1.2rem 2rem 2.4rem; font-family: var(--mono); font-size: 0.7rem; color: var(--ink-soft); border-top: 1px solid var(--line); }
+  footer a{ color: #6e4a1e; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Cruscotto civico &middot; Monterotondo (RM) &middot; HR-DTM 5m</div>
+  <h1>Analisi morfologica del territorio comunale</h1>
+  <p class="subtitle">9 layer derivati dal Modello Digitale del Terreno ad alta risoluzione (5 m/pixel), calcolati sul confine amministrativo ufficiale. Metodologia: algoritmo di Horn per pendenza/esposizione, curvatura di Zevenbergen-Thorne, indici morfologici compositi ispirati al progetto <a href="https://palermohub.github.io/Palerm-DTM-5m/" target="_blank" style="color:#8a2b1f;">Palermo Hub</a>.</p>
+</header>
+
+<main>
+  <div class="panel">
+    <h2>Analisi disponibili</h2>
+    <div id="layer-list">
+      <div class="layer-group-label">Morfometria di base</div>
+      <button class="layer-btn active" data-layer="elevazione">Elevazione</button>
+      <button class="layer-btn" data-layer="pendenza">Pendenza</button>
+      <button class="layer-btn" data-layer="esposizione">Esposizione</button>
+      <button class="layer-btn" data-layer="rugosita">Rugosità (TRI)</button>
+      <div class="layer-group-label">Forma del paesaggio</div>
+      <button class="layer-btn" data-layer="geomorfologia">Geomorfologia</button>
+      <button class="layer-btn" data-layer="curvatura">Curvatura totale</button>
+      <div class="layer-group-label">Rischio e pianificazione</div>
+      <button class="layer-btn" data-layer="stabilita">Stabilità versanti</button>
+      <button class="layer-btn" data-layer="costruibilita">Costruibilità</button>
+      <div class="layer-group-label">Energia</div>
+      <button class="layer-btn" data-layer="radiazione">Radiazione solare</button>
+    </div>
+    <div id="opacity-row">
+      <span>opacità</span>
+      <input type="range" id="opacity-slider" min="0.2" max="1" step="0.05" value="0.85">
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <aside>
+    <div class="panel">
+      <h2 id="stat-title-label">Statistiche — Elevazione</h2>
+      <div id="bigstats" class="bigstat"></div>
+      <div id="stat-desc"></div>
+      <table id="stat-table"></table>
+    </div>
+    <div class="panel">
+      <h2>Nota metodologica</h2>
+      <p class="note" id="note-text">Calcolato dal raster DTM 5m grezzo, ritagliato sul confine ISTAT del comune (40,80 km²). Indici compositi (stabilità, costruibilità, radiazione) sono stime semplificate — non sostituiscono studi geologici o energetici certificati.</p>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  Fonte DTM: HR-DTM-5m Italia (Panza et al. 2026, Zenodo) &middot; confine comunale: ISTAT / geojson-italy &middot; metodologia ispirata a <a href="https://palermohub.github.io/Palerm-DTM-5m/" target="_blank">Palermo Hub — OpenDataSicilia</a> &middot; elaborazione locale, non ufficiale
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+const BOUNDS = { lat_min: 42.02989724702607, lat_max: 42.10598132846082, lon_min: 12.565983709251327, lon_max: 12.676903904431533 };
+const leafletBounds = [[BOUNDS.lat_min, BOUNDS.lon_min],[BOUNDS.lat_max, BOUNDS.lon_max]];
+
+const map = L.map('map', { zoomControl: true, attributionControl: false }).fitBounds(leafletBounds);
+
+const LAYER_META = {
+  elevazione: {
+    title: "Elevazione", desc: "Quota del terreno rispetto al livello del mare.",
+    unit: "m", statKey: "elevazione", distKey: "distribuzione_pct",
+    big: [["min","Min (m)"],["media","Media (m)"],["max","Max (m)"]]
+  },
+  pendenza: {
+    title: "Pendenza", desc: "Inclinazione del terreno in gradi, calcolata con l'algoritmo di Horn.",
+    unit: "°", statKey: "pendenza", distKey: "distribuzione_pct",
+    big: [["media_deg","Media (°)"],["max_deg","Max (°)"],["std_deg","Dev.std (°)"]]
+  },
+  esposizione: {
+    title: "Esposizione", desc: "Direzione verso cui è orientato ogni versante (aspect).",
+    unit: "%", statKey: "esposizione", distKey: "distribuzione_pct",
+    big: null
+  },
+  rugosita: {
+    title: "Rugosità (TRI)", desc: "Terrain Ruggedness Index: differenza media di quota tra celle adiacenti.",
+    unit: "", statKey: "rugosita_tri", distKey: "distribuzione_pct",
+    big: [["media","Media"],["max","Max"]]
+  },
+  geomorfologia: {
+    title: "Geomorfologia", desc: "Classificazione del paesaggio in unità morfologiche (pianura, versante, cresta, valle, depressione).",
+    unit: "%", statKey: "geomorfologia", distKey: "distribuzione_pct",
+    big: null
+  },
+  curvatura: {
+    title: "Curvatura totale", desc: "Curvatura media della superficie: valori negativi (blu) indicano forme concave/accumulo, positivi (rosso) forme convesse/dispersione.",
+    unit: "", statKey: null, distKey: null, big: null
+  },
+  stabilita: {
+    title: "Stabilità versanti", desc: "Indice composito (pendenza 50% + curvatura 30% + rugosità 20%) su scala 1 (molto stabile) – 5 (molto instabile). Stima morfologica semplificata, non sostituisce studi geologici.",
+    unit: "%", statKey: "stabilita_versanti", distKey: "distribuzione_pct",
+    big: [["pct_a_rischio_cl3_5","% a rischio (cl.3-5)"]]
+  },
+  costruibilita: {
+    title: "Costruibilità", desc: "Idoneità morfologica all'edificazione (pendenza 60% + instabilità 40%), scala 1 (ottima) – 5 (critica). Solo fattori morfologici, non urbanistici o legali.",
+    unit: "%", statKey: "costruibilita", distKey: "distribuzione_pct",
+    big: [["pct_critica_cl4_5","% critica (cl.4-5)"]]
+  },
+  radiazione: {
+    title: "Radiazione solare (SRI)", desc: "Indice di radiazione solare stimato da esposizione e pendenza, normalizzato 0–1.",
+    unit: "", statKey: "radiazione_solare", distKey: "distribuzione_pct",
+    big: [["media_sri","Media SRI"]]
+  },
+};
+
+let dati = null;
+let currentOverlay = null;
+
+function loadOverlay(name) {
+  if (currentOverlay) map.removeLayer(currentOverlay);
+  const opacity = parseFloat(document.getElementById('opacity-slider').value);
+  currentOverlay = L.imageOverlay('layers/' + name + '.png', leafletBounds, { opacity: opacity }).addTo(map);
+}
+
+function renderStats(name) {
+  const meta = LAYER_META[name];
+  document.getElementById('stat-title-label').textContent = 'Statistiche — ' + meta.title;
+  document.getElementById('stat-desc').textContent = meta.desc;
+
+  const bigDiv = document.getElementById('bigstats');
+  bigDiv.innerHTML = '';
+  if (meta.big && meta.statKey && dati[meta.statKey]) {
+    meta.big.forEach(([key, label]) => {
+      const val = dati[meta.statKey][key];
+      if (val !== undefined) {
+        const d = document.createElement('div');
+        d.innerHTML = `<div class="val">${val}</div><div class="lbl">${label}</div>`;
+        bigDiv.appendChild(d);
+      }
+    });
+  }
+
+  const table = document.getElementById('stat-table');
+  table.innerHTML = '';
+  if (meta.statKey && meta.distKey && dati[meta.statKey] && dati[meta.statKey][meta.distKey]) {
+    const dist = dati[meta.statKey][meta.distKey];
+    Object.entries(dist).forEach(([label, pct]) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${label}</td><td>${pct}%</td>`;
+      table.appendChild(tr);
+    });
+  }
+}
+
+function selectLayer(name) {
+  document.querySelectorAll('.layer-btn').forEach(b => b.classList.toggle('active', b.dataset.layer === name));
+  loadOverlay(name);
+  renderStats(name);
+}
+
+document.querySelectorAll('.layer-btn').forEach(btn => {
+  btn.addEventListener('click', () => selectLayer(btn.dataset.layer));
+});
+document.getElementById('opacity-slider').addEventListener('input', () => {
+  if (currentOverlay) currentOverlay.setOpacity(parseFloat(document.getElementById('opacity-slider').value));
+});
+
+fetch('dati.json')
+  .then(r => r.json())
+  .then(d => {
+    dati = d;
+    selectLayer('elevazione');
+  });
+</script>
+
+</body>
+</html>
