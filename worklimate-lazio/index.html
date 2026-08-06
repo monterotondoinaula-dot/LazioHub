@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rischio da caldo — Comuni del Lazio</title>
+<meta name="description" content="Livello di rischio da caldo per il lavoro all'aperto (oggi, domani, dopodomani) per tutti i comuni del Lazio, dati Worklimate aggiornati ogni giorno.">
+    <meta name="keywords" content="rischio caldo, lavoro all'aperto, divieto lavoro caldo, Worklimate, Lazio, comuni Lazio, Roma, caldo estremo, emergenza caldo, sicurezza sul lavoro, meteo Lazio, ondata di calore">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <META HTTP-EQUIV="refresh" CONTENT="3600"> 
+	<meta name="author" content="Fork per il Lazio — basato sul progetto di Giovan Battista Vitrano per OpenDataSicilia.it">
+    <meta http-equiv="content-language" content="IT">
+    <meta name="robots" content="index,follow">
+    <meta name="creation_Date" content="05/08/2026">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="css/worklimate.css">
+<link rel="icon" href="img/favicon.png">
+
+	    <!-- Meta tags per social sharing pen Graph Protocol -->
+    <meta property="og:url" content="https://TUO-USER.github.io/worklimate-lazio/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pagina statica che mostra il rischio caldo lavoro all'aperto (basso/moderato/alto/emergenza) per i comuni del Lazio, fascia 12-16, oggi/domani/dopodomani. La tabella fornisce un'informazione utile e comparabile a quella ufficiale.
+	Per l'applicazione del divieto normativo fa fede esclusivamente la sezione ufficiale di Worklimate (le mappe PNG), non questa tabella.">
+    <meta property="og:description" content="Rischio da caldo per il lavoro all'aperto nei comuni del Lazio — dati Worklimate">
+    <meta property="og:image" content="https://TUO-USER.github.io/worklimate-lazio/img/social_card.jpg">
+	<!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="TUO-USER.github.io">
+    <meta property="twitter:url" content="https://TUO-USER.github.io/worklimate-lazio/">
+    <meta name="twitter:title" content="Pagina statica che mostra il rischio caldo lavoro all'aperto (basso/moderato/alto/emergenza) per i comuni del Lazio, fascia 12-16, oggi/domani/dopodomani. La tabella fornisce un'informazione utile e comparabile a quella ufficiale.
+	Per l'applicazione del divieto normativo fa fede esclusivamente la sezione ufficiale di Worklimate (le mappe PNG), non questa tabella.">
+    <meta name="twitter:description" content="Rischio da caldo per il lavoro all'aperto nei comuni del Lazio — dati Worklimate">
+    <meta name="twitter:image" content="https://TUO-USER.github.io/worklimate-lazio/img/social_card.jpg">
+
+<script>
+  document.documentElement.setAttribute('data-theme', localStorage.getItem('sicilia-rischio-caldo-theme') || 'light');
+</script>
+
+	 <!-- Google tag (gtag.js) — sostituisci con il tuo ID GA4 se vuoi tracciare le visite -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+</head>
+
+<body>
+
+<div class="viz-root">
+  <div class="header-row">
+    <div>
+      <h1 id="pageTitle">Rischio da stress da caldo — comuni del Lazio</h1>
+      <p class="subtitle" id="pageSubtitle">Dati Worklimate (fascia oraria 12–16). Un valore per comune al giorno, non una superficie continua.</p>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button"></button>
+  </div>
+
+  <div class="locate-row" id="locateRow">
+    <button class="locate-btn" id="locateBtn" type="button">📍 Il mio comune</button>
+    <span class="locate-status" id="locateStatus"></span>
+  </div>
+  <div class="my-comune-card prov-group" id="myComuneCard" hidden></div>
+
+  <div class="caveat">
+    <b>Perché una tabella e non una mappa.</b> Worklimate assegna il rischio alla stazione meteo-modello più vicina a un punto: non è un dato che segue i confini comunali, e nemmeno una griglia densa che giustifichi un'interpolazione spaziale continua. Colorare i poligoni dei comuni (coropletica) implicherebbe salti netti ai confini amministrativi che il fenomeno meteorologico non ha; una mappa a punti mostrerebbe solo l'ubicazione dei comuni, non aggiungerebbe informazione al colore stesso. La struttura reale del dato è <b>luogo × giorno → livello</b>: una matrice/tabella colorata la rappresenta senza inventare continuità spaziale che i dati non hanno.
+  </div>
+
+  <div class="law-banner">
+    <div class="law-title">⚠️ Normativa vigente</div>
+    Nel Lazio è in vigore l'<a href="https://www.regione.lazio.it/notizie/piano-anti-caldo-2026-firmata-ordinanza-per-tutelare-salute-sicurezza-dei-lavoratori-lazio" target="_blank" rel="noopener">ordinanza anti-caldo della Regione Lazio</a> (firmata dal presidente Francesco Rocca, valida fino al 15 settembre), che dispone lo stop ai lavori all'aperto in condizioni di esposizione prolungata al sole nella fascia oraria 12:30–16:00, nei giorni con rischio "alto" secondo la mappa nazionale Worklimate, per i settori più esposti (agricoltura e florovivaismo, edilizia, cave, logistica di piazzale, consegne urbane in bici/scooter). La tabella fornisce un'informazione utile e comparabile a quella ufficiale. Per l'applicazione del divieto normativo fa fede esclusivamente la <a href="https://www.worklimate.it/scelta-mappa/sole-attivita-fisica-alta/" target="_blank" rel="noopener">sezione ufficiale di Worklimate</a> (le mappe PNG), non questa tabella. <a href="#methodologyDisclaimer" id="lawDisclaimerLink">Maggiori dettagli nel disclaimer, clicca qui</a>.
+  </div>
+
+  <div class="kpi-top-row">
+    <div class="card kpi-mini">
+      <h2>Oggi in sintesi</h2>
+      <div class="kpi-number" id="kpiNumber"></div>
+      <div class="kpi-sub" id="kpiSub"></div>
+    </div>
+    <div class="card kpi-mini">
+      <h2>Vista</h2>
+      <label class="view-toggle">
+        <input type="checkbox" id="groupByProvince" checked>
+        Raggruppa per provincia (ordina per criticità)
+      </label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Distribuzione per giorno</h2>
+    <div class="summary-grid" id="summary"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="card">
+    <h2>Comuni</h2>
+    <div class="controls">
+      <div class="search-wrap" id="searchWrap">
+        <input id="search" type="text" placeholder="Cerca comune…" autocomplete="off">
+        <button class="search-clear" id="searchClear" type="button" aria-label="Cancella ricerca">×</button>
+      </div>
+      <select id="provFilter"></select>
+    </div>
+    <div class="level-filter" id="levelFilter"></div>
+    <div class="active-filters" id="activeFilters" hidden></div>
+    <div class="count-note" id="countNote"></div>
+    <div class="empty-state" id="emptyState" hidden>
+      <div class="empty-state-icon">🔍</div>
+      <p class="empty-state-title">Nessun comune trovato</p>
+      <p class="empty-state-sub">Prova a modificare la ricerca o i filtri attivi.</p>
+      <button type="button" class="empty-state-reset" id="emptyStateReset">Rimuovi filtri</button>
+    </div>
+    <div class="table-wrap" id="flatTableWrap">
+      <table>
+        <thead id="flatThead">
+          <tr>
+            <th data-key="nome">Comune</th>
+            <th data-key="provincia">Prov.</th>
+            <th data-key="g1" id="thG1">Oggi</th>
+            <th class="trend-th">Andamento 3 giorni</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="grouped-view" id="groupedView" hidden></div>
+  </div>
+
+  <div class="prov-group methodology-disclaimer collapsed" id="methodologyDisclaimer">
+    <button type="button" class="prov-group-header methodology-header" aria-expanded="false">
+      <span>ℹ️ Disclaimer</span>
+      <span class="chevron">▾</span>
+    </button>
+    <div class="prov-group-body methodology-body">
+      <h3>Il punto di partenza</h3>
+      <p>Worklimate non pubblica un WMS con la mappa, nemmeno a bassa risoluzione. Il motivo è tecnico: i loro modelli sono generalisti, con un grigliato molto largo — pubblicare il raster vero mostrerebbe quanto è grossolana la cella, e forse preferiscono non farlo vedere così esplicitamente.</p>
+      <p>Quello che espongono invece è un servizio diverso: tu dai un indirizzo (geocoding), loro ti restituiscono il punto del grigliato più vicino a quell'indirizzo, e per quel punto ti dicono alto/medio/basso.</p>
+
+      <h3>CLI @aborruso/worklimate</h3>
+      <p>È una CLI Node.js <a href="https://github.com/aborruso/worklimate" target="_blank" rel="noopener">@aborruso/worklimate</a> che legge i dati di stress da caldo pubblicati da Worklimate, senza bisogno di autenticazione, usando gli endpoint pubblici di app.worklimate.it e archivio.worklimate.it. È pensata sia per uso interattivo da terminale sia per essere orchestrata da un LLM o da uno script, con output JSON/CSV stabili e comandi componibili.</p>
+
+      <h3>Note raccolte dal dialogo email da @aborruso con il CNR</h3>
+      <ul>
+        <li>l'endpoint interrogato dalla CLI (<code>osm-stazioni.php</code>, con referer <code>.../ordinanza-caldo-lavoro</code>) è lo stesso usato dall'app ufficiale app.worklimate.it/ordinanza-caldo-lavoro, cioè proprio quella indicata come fonte di riferimento ufficiale;</li>
+        <li>il valore per singolo giorno corrisponde alla fascia 12:00-16:00, la stessa fascia/categoria richiamata dall'ordinanza;</li>
+        <li>attenzione importante: va sempre indicato il comune e la provincia, non un indirizzo più preciso (via, civico), perché la previsione non è pensata per essere risolta a quel livello di dettaglio — quindi il geocoding va tenuto a livello comunale, non puntuale;</li>
+        <li>e la frase chiave che conferma quello che dicevi: non risulta esistere un servizio geografico standard (WMS/WMTS/WCS) né un'API REST dedicata per interrogare il raster della mappa punto per punto — l'endpoint usato è, ad oggi, l'unica fonte utilizzabile in modo automatico.</li>
+      </ul>
+
+      <h3>Cosa fa questa pagina</h3>
+      <p>Con lo stesso principio della CLI di @aborruso e del progetto originale <a href="https://github.com/PalermoHub/worklimate" target="_blank" rel="noopener">worklimate</a> di PalermoHub/OpenDataSicilia per la Sicilia, questo fork è una pagina statica che mostra il rischio caldo lavoro all'aperto (basso/moderato/alto/emergenza) per i comuni del Lazio, fascia 12-16, oggi/domani/dopodomani. Tabella con filtro nome comune, ordinamento comune/provincia.</p>
+      <p>Chiama gli endpoint pubblici app.worklimate.it (<code>osm-stazioni.php</code>): trova la cella della griglia meteo più vicina a ogni comune (via centroide lat/lon), fa dedup delle celle, interroga il rischio per cella (g1/g2/g3 = oggi/domani/dopodomani) e fa il join comune → cella → rischio.</p>
+
+      <h3>Possibili rischi</h3>
+      <p>Se un utente legge "Ragusa: alto" senza capire come è stato calcolato, può fare un ragionamento sbagliato tipo "quindi oggi a Ragusa nessuno può lavorare all'aperto". Ma non è così semplice.</p>
+      <p>La norma regionale non fa riferimento al sito Worklimate in generale, fa riferimento a una sezione specifica: quella per i lavoratori, quella sulle ore centrali (le 12-16 diciamo), quella che genera divieto di lavoro all'aperto. E l'output ufficiale di quella sezione sono mappe PNG statiche.</p>
+      <p>I dati usati per costruire la tabella non arrivano dalla fonte normativa, ma da un'altra via — le chiamate API — che porta a un'informazione comparabile, ma che tecnicamente parlando "non fa legge". Chi fa legge è la mappa PNG di quella sezione specifica: <a href="https://www.worklimate.it/scelta-mappa/sole-attivita-fisica-alta/" target="_blank" rel="noopener">worklimate.it/scelta-mappa/sole-attivita-fisica-alta</a>.</p>
+      <p>@aborruso ha chiesto conferma al CNR se il risultato delle chiamate API (alto/medio/basso via geocoding sul punto più vicino) fosse paragonabile al risultato della sezione ufficiale con le PNG. Loro hanno confermato: sì, è comparabile, quando l'API dice "alto" corrisponde al giorno in cui scatta il divieto secondo la sezione ufficiale.</p>
+      <p>La tabella di @opendatasicilia fornisce un'informazione utile e comparabile a quella ufficiale.<br>Per l'applicazione del divieto normativo fa fede esclusivamente la sezione ufficiale di Worklimate (le mappe PNG), non questa tabella.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span id="updatedNote"></span> <span id="freshnessBadge" class="freshness-badge"></span><br>
+    Fonte: <a href="https://app.worklimate.it" target="_blank" rel="noopener">app.worklimate.it</a> via endpoint pubblico <code>osm-stazioni.php</code> (repo <a href="https://github.com/aborruso/worklimate" target="_blank" rel="noopener">aborruso/worklimate</a>, strumenti open source non ufficiali per interrogare i dati di rischio da stress termico di Worklimate/protezione civile). Coordinate comuni: centroidi da confini amministrativi ISTAT (openpolis/geojson-italy). Aggiornato automaticamente ogni giorno via GitHub Actions.<br>
+    Fork del progetto <a href="https://github.com/PalermoHub/worklimate" target="_blank" rel="noopener">worklimate</a> realizzato da OpenDataSicilia/PalermoHub per la Sicilia, adattato ai comuni del Lazio.
+  </footer>
+</div>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Torna in cima" title="Torna in cima">↑</button>
+    <script src="js/worklimate.js"></script>
+
+</body>
+</html>
