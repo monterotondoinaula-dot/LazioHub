@@ -1,0 +1,67 @@
+name: Aggiorna rischio da caldo Lazio
+
+on:
+  schedule:
+    - cron: '30 4 * * *'
+    - cron: '30 6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-lazio-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: worklimate-lazio
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verifica quale cron (CET/CEST) e' quello attivo in stagione
+        id: check-ora
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          offset=$(TZ=Europe/Rome date +%z)
+          schedule="${{ github.event.schedule }}"
+          if { [ "$schedule" = "30 4 * * *" ] && [ "$offset" = "+0200" ]; } || \
+             { [ "$schedule" = "30 6 * * *" ] && [ "$offset" = "+0100" ]; }; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Skip run." >&2
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.check-ora.outputs.run == 'true'
+        with:
+          node-version: 20
+
+      - name: Aggiorna dati rischio
+        if: steps.check-ora.outputs.run == 'true'
+        run: node scripts/update-data.mjs
+
+      - name: Commit e push se cambiato
+        if: steps.check-ora.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/rischio-oggi.json data/storico-rischio.csv; then
+            echo "Nessuna modifica, skip commit."
+            exit 0
+          fi
+          git add data/rischio-oggi.json data/storico-rischio.csv
+          git commit -m "Aggiorna rischio da caldo Lazio $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git push && exit 0
+            git fetch origin main
+            git rebase origin/main
+          done
+          git push
