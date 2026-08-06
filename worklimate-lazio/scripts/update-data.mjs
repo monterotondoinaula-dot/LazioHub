@@ -1,0 +1,147 @@
+#!/usr/bin/env node
+// Aggiorna index.html con il rischio da caldo del giorno per i comuni del Lazio,
+// interrogando i due endpoint pubblici usati dall'app Worklimate
+// (https://github.com/aborruso/worklimate). Nessuna autenticazione richiesta.
+//
+// Non tocca data/comuni-lazio.json: l'elenco comuni/centroidi è statico
+// (confini amministrativi ISTAT, cambiano di rado) e va rigenerato a mano
+// con scripts/fetch-comuni.mjs solo in caso di variazioni comunali.
+
+import { readFile, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, '..');
+const COMUNI_PATH = path.join(ROOT, 'data', 'comuni-lazio.json');
+const JSON_PATH = path.join(ROOT, 'data', 'rischio-oggi.json');
+const CSV_PATH = path.join(ROOT, 'data', 'storico-rischio.csv');
+
+const UA =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+const HEADERS = {
+  'User-Agent': UA,
+  Accept: 'application/json, text/javascript, */*; q=0.01',
+  'X-Requested-With': 'XMLHttpRequest',
+  Referer: 'https://app.worklimate.it/ordinanza-caldo-lavoro',
+};
+const THROTTLE_MS = 100;
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function getJson(url) {
+  const res = await fetch(url, { headers: HEADERS });
+  if (!res.ok) throw new Error(`HTTP ${res.status} per ${url}`);
+  return res.json();
+}
+
+async function nearestStation(place, lat, lon) {
+  const params = new URLSearchParams({
+    osmod: 'true',
+    place,
+    latx: String(lat),
+    lonx: String(lon),
+  });
+  return getJson(`https://app.worklimate.it/osm-stazioni.php?${params}`);
+}
+
+async function todayRisk(pgrid) {
+  const params = new URLSearchParams({ pgrid: String(pgrid), sys: 'regular' });
+  return getJson(`https://app.worklimate.it/osm-stazioni.php?${params}`);
+}
+
+function csvField(v) {
+  const s = String(v);
+  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+}
+
+async function appendCsvStorico(today, compact) {
+  // solo il rischio reale del giorno (g1): g2/g3 sono previsione e verranno
+  // registrate come g1 nei run successivi, includerle qui duplicherebbe il dato.
+  const header = 'data,comune,provincia,rischio\n';
+  let existing = '';
+  try {
+    existing = await readFile(CSV_PATH, 'utf8');
+  } catch {
+    // file non esiste ancora: verrà creato con l'header
+  }
+  const righe = compact
+    .map(([nome, sigla, g1]) => [today, nome, sigla, g1].map(csvField).join(','))
+    .join('\n');
+  const out = existing ? `${existing}${righe}\n` : `${header}${righe}\n`;
+  await writeFile(CSV_PATH, out, 'utf8');
+  console.log(`Aggiornato ${CSV_PATH} (+${compact.length} righe).`);
+}
+
+async function main() {
+  const comuni = JSON.parse(await readFile(COMUNI_PATH, 'utf8'));
+  console.log(`Comuni da interrogare: ${comuni.length}`);
+
+  // 1. stazione/pgrid più vicina per ciascun comune
+  const withStation = [];
+  const stationErrors = [];
+  for (const [i, c] of comuni.entries()) {
+    try {
+      const j = await nearestStation(c.nome, c.lat, c.lon);
+      withStation.push({ ...c, pgrid: j.id });
+    } catch (e) {
+      stationErrors.push([c.nome, e.message]);
+    }
+    if (i % 50 === 0) console.log(`  stazioni ${i}/${comuni.length}`);
+    await sleep(THROTTLE_MS);
+  }
+  console.log(`Stazioni ok: ${withStation.length}, errori: ${stationErrors.length}`);
+  if (stationErrors.length) console.log(stationErrors);
+
+  // 2. rischio per ogni pgrid unico (dedup: più comuni condividono la stessa cella griglia)
+  const uniquePgrids = [...new Set(withStation.map((c) => c.pgrid))];
+  const riskByPgrid = new Map();
+  const riskErrors = [];
+  for (const [i, pg] of uniquePgrids.entries()) {
+    try {
+      riskByPgrid.set(pg, await todayRisk(pg));
+    } catch (e) {
+      riskErrors.push([pg, e.message]);
+    }
+    if (i % 40 === 0) console.log(`  rischio ${i}/${uniquePgrids.length}`);
+    await sleep(THROTTLE_MS);
+  }
+  console.log(`Rischio ok: ${riskByPgrid.size}/${uniquePgrids.length}, errori: ${riskErrors.length}`);
+
+  // 3. join finale [nome, sigla, g1, g2, g3]
+  const compact = [];
+  const joinErrors = [];
+  for (const c of withStation) {
+    const r = riskByPgrid.get(c.pgrid);
+    if (!r?.g1 || !r?.g2 || !r?.g3) {
+      joinErrors.push([c.nome, c.pgrid]);
+      continue;
+    }
+    compact.push([c.nome, c.sigla, r.g1.label, r.g2.label, r.g3.label]);
+  }
+  console.log(`Comuni con dato completo: ${compact.length}`);
+  if (joinErrors.length) console.log('Rischio incompleto per:', joinErrors);
+  if (compact.length < comuni.length * 0.8) {
+    throw new Error(
+      `Troppi comuni senza dato (${compact.length}/${comuni.length}): possibile problema con l'API, aborto senza scrivere l'HTML.`,
+    );
+  }
+
+  // 4. scrivi il dato del giorno in JSON (letto da index.html via fetch)
+  const now = new Date();
+  const today = now.toISOString().slice(0, 10);
+  await writeFile(
+    JSON_PATH,
+    JSON.stringify({ generatedAt: today, generatedAtTimestamp: now.toISOString(), data: compact }),
+    'utf8',
+  );
+  console.log(`Scritto ${JSON_PATH} (generatedAt=${today}, ${compact.length} comuni).`);
+
+  // 5. accoda al CSV storico (append-only, una riga per comune per giorno)
+  await appendCsvStorico(today, compact);
+}
+
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
