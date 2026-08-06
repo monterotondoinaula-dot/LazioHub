@@ -1,0 +1,3026 @@
+[
+ {
+  "nome": "Acquapendente",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056001",
+  "lat": 42.767742,
+  "lon": 11.880219
+ },
+ {
+  "nome": "Arlena di Castro",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056002",
+  "lat": 42.456536,
+  "lon": 11.811491
+ },
+ {
+  "nome": "Bagnoregio",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056003",
+  "lat": 42.614607,
+  "lon": 12.090908
+ },
+ {
+  "nome": "Barbarano Romano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056004",
+  "lat": 42.24951,
+  "lon": 12.074827
+ },
+ {
+  "nome": "Bassano Romano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056005",
+  "lat": 42.205611,
+  "lon": 12.171544
+ },
+ {
+  "nome": "Bassano in Teverina",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056006",
+  "lat": 42.462451,
+  "lon": 12.308818
+ },
+ {
+  "nome": "Blera",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056007",
+  "lat": 42.226198,
+  "lon": 12.003259
+ },
+ {
+  "nome": "Bolsena",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056008",
+  "lat": 42.632932,
+  "lon": 11.981963
+ },
+ {
+  "nome": "Bomarzo",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056009",
+  "lat": 42.505515,
+  "lon": 12.25604
+ },
+ {
+  "nome": "Calcata",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056010",
+  "lat": 42.216643,
+  "lon": 12.425432
+ },
+ {
+  "nome": "Canepina",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056011",
+  "lat": 42.373101,
+  "lon": 12.216194
+ },
+ {
+  "nome": "Canino",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056012",
+  "lat": 42.444098,
+  "lon": 11.680633
+ },
+ {
+  "nome": "Capodimonte",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056013",
+  "lat": 42.536691,
+  "lon": 11.878384
+ },
+ {
+  "nome": "Capranica",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056014",
+  "lat": 42.255163,
+  "lon": 12.14139
+ },
+ {
+  "nome": "Caprarola",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056015",
+  "lat": 42.322816,
+  "lon": 12.220843
+ },
+ {
+  "nome": "Carbognano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056016",
+  "lat": 42.324049,
+  "lon": 12.278427
+ },
+ {
+  "nome": "Castel Sant'Elia",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056017",
+  "lat": 42.246623,
+  "lon": 12.379867
+ },
+ {
+  "nome": "Castiglione in Teverina",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056018",
+  "lat": 42.647753,
+  "lon": 12.176211
+ },
+ {
+  "nome": "Celleno",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056019",
+  "lat": 42.559969,
+  "lon": 12.125067
+ },
+ {
+  "nome": "Cellere",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056020",
+  "lat": 42.504758,
+  "lon": 11.757706
+ },
+ {
+  "nome": "Civita Castellana",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056021",
+  "lat": 42.308855,
+  "lon": 12.451118
+ },
+ {
+  "nome": "Civitella d'Agliano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056022",
+  "lat": 42.613599,
+  "lon": 12.200062
+ },
+ {
+  "nome": "Corchiano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056023",
+  "lat": 42.359237,
+  "lon": 12.357745
+ },
+ {
+  "nome": "Fabrica di Roma",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056024",
+  "lat": 42.32541,
+  "lon": 12.323785
+ },
+ {
+  "nome": "Faleria",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056025",
+  "lat": 42.235809,
+  "lon": 12.444036
+ },
+ {
+  "nome": "Farnese",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056026",
+  "lat": 42.577799,
+  "lon": 11.718387
+ },
+ {
+  "nome": "Gallese",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056027",
+  "lat": 42.385069,
+  "lon": 12.404277
+ },
+ {
+  "nome": "Gradoli",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056028",
+  "lat": 42.624706,
+  "lon": 11.855145
+ },
+ {
+  "nome": "Graffignano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056029",
+  "lat": 42.55973,
+  "lon": 12.224725
+ },
+ {
+  "nome": "Grotte di Castro",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056030",
+  "lat": 42.669114,
+  "lon": 11.864053
+ },
+ {
+  "nome": "Ischia di Castro",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056031",
+  "lat": 42.528241,
+  "lon": 11.666309
+ },
+ {
+  "nome": "Latera",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056032",
+  "lat": 42.623303,
+  "lon": 11.809116
+ },
+ {
+  "nome": "Lubriano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056033",
+  "lat": 42.648214,
+  "lon": 12.116946
+ },
+ {
+  "nome": "Marta",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056034",
+  "lat": 42.517368,
+  "lon": 11.920856
+ },
+ {
+  "nome": "Montalto di Castro",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056035",
+  "lat": 42.393498,
+  "lon": 11.578153
+ },
+ {
+  "nome": "Montefiascone",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056036",
+  "lat": 42.539616,
+  "lon": 12.021638
+ },
+ {
+  "nome": "Monte Romano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056037",
+  "lat": 42.322429,
+  "lon": 11.898872
+ },
+ {
+  "nome": "Monterosi",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056038",
+  "lat": 42.184633,
+  "lon": 12.293948
+ },
+ {
+  "nome": "Nepi",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056039",
+  "lat": 42.226181,
+  "lon": 12.328913
+ },
+ {
+  "nome": "Onano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056040",
+  "lat": 42.68303,
+  "lon": 11.807106
+ },
+ {
+  "nome": "Oriolo Romano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056041",
+  "lat": 42.169007,
+  "lon": 12.125492
+ },
+ {
+  "nome": "Orte",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056042",
+  "lat": 42.449695,
+  "lon": 12.394489
+ },
+ {
+  "nome": "Piansano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056043",
+  "lat": 42.50948,
+  "lon": 11.838158
+ },
+ {
+  "nome": "Proceno",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056044",
+  "lat": 42.779291,
+  "lon": 11.799613
+ },
+ {
+  "nome": "Ronciglione",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056045",
+  "lat": 42.285337,
+  "lon": 12.220193
+ },
+ {
+  "nome": "Villa San Giovanni in Tuscia",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056046",
+  "lat": 42.283156,
+  "lon": 12.04241
+ },
+ {
+  "nome": "San Lorenzo Nuovo",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056047",
+  "lat": 42.677002,
+  "lon": 11.920478
+ },
+ {
+  "nome": "Soriano nel Cimino",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056048",
+  "lat": 42.448905,
+  "lon": 12.236189
+ },
+ {
+  "nome": "Sutri",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056049",
+  "lat": 42.230866,
+  "lon": 12.242269
+ },
+ {
+  "nome": "Tarquinia",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056050",
+  "lat": 42.265338,
+  "lon": 11.774667
+ },
+ {
+  "nome": "Tessennano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056051",
+  "lat": 42.461224,
+  "lon": 11.783656
+ },
+ {
+  "nome": "Tuscania",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056052",
+  "lat": 42.374974,
+  "lon": 11.811462
+ },
+ {
+  "nome": "Valentano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056053",
+  "lat": 42.591508,
+  "lon": 11.791488
+ },
+ {
+  "nome": "Vallerano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056054",
+  "lat": 42.367967,
+  "lon": 12.261737
+ },
+ {
+  "nome": "Vasanello",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056055",
+  "lat": 42.418604,
+  "lon": 12.34315
+ },
+ {
+  "nome": "Vejano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056056",
+  "lat": 42.194863,
+  "lon": 12.07477
+ },
+ {
+  "nome": "Vetralla",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056057",
+  "lat": 42.304111,
+  "lon": 12.013077
+ },
+ {
+  "nome": "Vignanello",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056058",
+  "lat": 42.382189,
+  "lon": 12.298744
+ },
+ {
+  "nome": "Viterbo",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056059",
+  "lat": 42.46104,
+  "lon": 12.074846
+ },
+ {
+  "nome": "Vitorchiano",
+  "provincia": "Viterbo",
+  "sigla": "VT",
+  "istat": "056060",
+  "lat": 42.469974,
+  "lon": 12.183696
+ },
+ {
+  "nome": "Accumoli",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057001",
+  "lat": 42.700688,
+  "lon": 13.247467
+ },
+ {
+  "nome": "Amatrice",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057002",
+  "lat": 42.627636,
+  "lon": 13.296989
+ },
+ {
+  "nome": "Antrodoco",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057003",
+  "lat": 42.394402,
+  "lon": 13.108333
+ },
+ {
+  "nome": "Ascrea",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057004",
+  "lat": 42.209946,
+  "lon": 12.979921
+ },
+ {
+  "nome": "Belmonte in Sabina",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057005",
+  "lat": 42.332219,
+  "lon": 12.878981
+ },
+ {
+  "nome": "Borbona",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057006",
+  "lat": 42.49933,
+  "lon": 13.131492
+ },
+ {
+  "nome": "Borgorose",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057007",
+  "lat": 42.188534,
+  "lon": 13.274808
+ },
+ {
+  "nome": "Borgo Velino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057008",
+  "lat": 42.402028,
+  "lon": 13.058055
+ },
+ {
+  "nome": "Cantalice",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057009",
+  "lat": 42.482852,
+  "lon": 12.92414
+ },
+ {
+  "nome": "Cantalupo in Sabina",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057010",
+  "lat": 42.301836,
+  "lon": 12.635529
+ },
+ {
+  "nome": "Casaprota",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057011",
+  "lat": 42.247002,
+  "lon": 12.799297
+ },
+ {
+  "nome": "Casperia",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057012",
+  "lat": 42.342671,
+  "lon": 12.681956
+ },
+ {
+  "nome": "Castel di Tora",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057013",
+  "lat": 42.210273,
+  "lon": 12.974861
+ },
+ {
+  "nome": "Castelnuovo di Farfa",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057014",
+  "lat": 42.236051,
+  "lon": 12.73499
+ },
+ {
+  "nome": "Castel Sant'Angelo",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057015",
+  "lat": 42.400897,
+  "lon": 13.015158
+ },
+ {
+  "nome": "Cittaducale",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057016",
+  "lat": 42.395133,
+  "lon": 12.971689
+ },
+ {
+  "nome": "Cittareale",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057017",
+  "lat": 42.616549,
+  "lon": 13.14472
+ },
+ {
+  "nome": "Collalto Sabino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057018",
+  "lat": 42.164071,
+  "lon": 13.057681
+ },
+ {
+  "nome": "Colle di Tora",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057019",
+  "lat": 42.20438,
+  "lon": 12.940233
+ },
+ {
+  "nome": "Collegiove",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057020",
+  "lat": 42.175347,
+  "lon": 13.028519
+ },
+ {
+  "nome": "Collevecchio",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057021",
+  "lat": 42.312482,
+  "lon": 12.530936
+ },
+ {
+  "nome": "Colli sul Velino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057022",
+  "lat": 42.493915,
+  "lon": 12.782868
+ },
+ {
+  "nome": "Concerviano",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057023",
+  "lat": 42.323292,
+  "lon": 12.957313
+ },
+ {
+  "nome": "Configni",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057024",
+  "lat": 42.436897,
+  "lon": 12.637077
+ },
+ {
+  "nome": "Contigliano",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057025",
+  "lat": 42.430019,
+  "lon": 12.76444
+ },
+ {
+  "nome": "Cottanello",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057026",
+  "lat": 42.412912,
+  "lon": 12.695235
+ },
+ {
+  "nome": "Fara in Sabina",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057027",
+  "lat": 42.18025,
+  "lon": 12.68688
+ },
+ {
+  "nome": "Fiamignano",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057028",
+  "lat": 42.308911,
+  "lon": 13.153869
+ },
+ {
+  "nome": "Forano",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057029",
+  "lat": 42.282031,
+  "lon": 12.602576
+ },
+ {
+  "nome": "Frasso Sabino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057030",
+  "lat": 42.220425,
+  "lon": 12.815065
+ },
+ {
+  "nome": "Greccio",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057031",
+  "lat": 42.452638,
+  "lon": 12.756032
+ },
+ {
+  "nome": "Labro",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057032",
+  "lat": 42.520692,
+  "lon": 12.800926
+ },
+ {
+  "nome": "Leonessa",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057033",
+  "lat": 42.571516,
+  "lon": 13.005103
+ },
+ {
+  "nome": "Longone Sabino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057034",
+  "lat": 42.297364,
+  "lon": 12.949915
+ },
+ {
+  "nome": "Magliano Sabina",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057035",
+  "lat": 42.352919,
+  "lon": 12.48101
+ },
+ {
+  "nome": "Marcetelli",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057036",
+  "lat": 42.220665,
+  "lon": 13.046126
+ },
+ {
+  "nome": "Micigliano",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057037",
+  "lat": 42.453486,
+  "lon": 13.046008
+ },
+ {
+  "nome": "Mompeo",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057038",
+  "lat": 42.254404,
+  "lon": 12.767993
+ },
+ {
+  "nome": "Montasola",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057039",
+  "lat": 42.380194,
+  "lon": 12.694656
+ },
+ {
+  "nome": "Montebuono",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057040",
+  "lat": 42.375055,
+  "lon": 12.58189
+ },
+ {
+  "nome": "Monteleone Sabino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057041",
+  "lat": 42.228549,
+  "lon": 12.869172
+ },
+ {
+  "nome": "Montenero Sabino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057042",
+  "lat": 42.289098,
+  "lon": 12.821449
+ },
+ {
+  "nome": "Monte San Giovanni in Sabina",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057043",
+  "lat": 42.31494,
+  "lon": 12.768828
+ },
+ {
+  "nome": "Montopoli di Sabina",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057044",
+  "lat": 42.218073,
+  "lon": 12.656861
+ },
+ {
+  "nome": "Morro Reatino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057045",
+  "lat": 42.525393,
+  "lon": 12.836754
+ },
+ {
+  "nome": "Nespolo",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057046",
+  "lat": 42.156496,
+  "lon": 13.074046
+ },
+ {
+  "nome": "Orvinio",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057047",
+  "lat": 42.132635,
+  "lon": 12.940861
+ },
+ {
+  "nome": "Paganico Sabino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057048",
+  "lat": 42.182431,
+  "lon": 13.00438
+ },
+ {
+  "nome": "Pescorocchiano",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057049",
+  "lat": 42.213632,
+  "lon": 13.143877
+ },
+ {
+  "nome": "Petrella Salto",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057050",
+  "lat": 42.298908,
+  "lon": 13.063256
+ },
+ {
+  "nome": "Poggio Bustone",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057051",
+  "lat": 42.503534,
+  "lon": 12.889662
+ },
+ {
+  "nome": "Poggio Catino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057052",
+  "lat": 42.291247,
+  "lon": 12.67446
+ },
+ {
+  "nome": "Poggio Mirteto",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057053",
+  "lat": 42.265766,
+  "lon": 12.678379
+ },
+ {
+  "nome": "Poggio Moiano",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057054",
+  "lat": 42.200356,
+  "lon": 12.87373
+ },
+ {
+  "nome": "Poggio Nativo",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057055",
+  "lat": 42.214707,
+  "lon": 12.786963
+ },
+ {
+  "nome": "Poggio San Lorenzo",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057056",
+  "lat": 42.250922,
+  "lon": 12.842579
+ },
+ {
+  "nome": "Posta",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057057",
+  "lat": 42.51609,
+  "lon": 13.078592
+ },
+ {
+  "nome": "Pozzaglia Sabina",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057058",
+  "lat": 42.154614,
+  "lon": 12.968215
+ },
+ {
+  "nome": "Rieti",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057059",
+  "lat": 42.407516,
+  "lon": 12.859036
+ },
+ {
+  "nome": "Rivodutri",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057060",
+  "lat": 42.516012,
+  "lon": 12.859965
+ },
+ {
+  "nome": "Roccantica",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057061",
+  "lat": 42.32213,
+  "lon": 12.701485
+ },
+ {
+  "nome": "Rocca Sinibalda",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057062",
+  "lat": 42.261729,
+  "lon": 12.942902
+ },
+ {
+  "nome": "Salisano",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057063",
+  "lat": 42.277409,
+  "lon": 12.743309
+ },
+ {
+  "nome": "Scandriglia",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057064",
+  "lat": 42.161839,
+  "lon": 12.857052
+ },
+ {
+  "nome": "Selci",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057065",
+  "lat": 42.314568,
+  "lon": 12.617358
+ },
+ {
+  "nome": "Stimigliano",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057066",
+  "lat": 42.292424,
+  "lon": 12.561487
+ },
+ {
+  "nome": "Tarano",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057067",
+  "lat": 42.336204,
+  "lon": 12.586044
+ },
+ {
+  "nome": "Toffia",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057068",
+  "lat": 42.201244,
+  "lon": 12.761842
+ },
+ {
+  "nome": "Torricella in Sabina",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057069",
+  "lat": 42.269139,
+  "lon": 12.873057
+ },
+ {
+  "nome": "Torri in Sabina",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057070",
+  "lat": 42.360732,
+  "lon": 12.622471
+ },
+ {
+  "nome": "Turania",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057071",
+  "lat": 42.130281,
+  "lon": 13.007464
+ },
+ {
+  "nome": "Vacone",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057072",
+  "lat": 42.401339,
+  "lon": 12.624701
+ },
+ {
+  "nome": "Varco Sabino",
+  "provincia": "Rieti",
+  "sigla": "RI",
+  "istat": "057073",
+  "lat": 42.238489,
+  "lon": 13.033088
+ },
+ {
+  "nome": "Affile",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058001",
+  "lat": 41.892862,
+  "lon": 13.084423
+ },
+ {
+  "nome": "Agosta",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058002",
+  "lat": 41.979313,
+  "lon": 13.0382
+ },
+ {
+  "nome": "Albano Laziale",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058003",
+  "lat": 41.718703,
+  "lon": 12.645117
+ },
+ {
+  "nome": "Allumiere",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058004",
+  "lat": 42.148332,
+  "lon": 11.899311
+ },
+ {
+  "nome": "Anguillara Sabazia",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058005",
+  "lat": 42.064628,
+  "lon": 12.26758
+ },
+ {
+  "nome": "Anticoli Corrado",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058006",
+  "lat": 42.006438,
+  "lon": 12.979396
+ },
+ {
+  "nome": "Anzio",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058007",
+  "lat": 41.493984,
+  "lon": 12.613445
+ },
+ {
+  "nome": "Arcinazzo Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058008",
+  "lat": 41.865064,
+  "lon": 13.148107
+ },
+ {
+  "nome": "Ariccia",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058009",
+  "lat": 41.694761,
+  "lon": 12.6586
+ },
+ {
+  "nome": "Arsoli",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058010",
+  "lat": 42.031096,
+  "lon": 13.024231
+ },
+ {
+  "nome": "Artena",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058011",
+  "lat": 41.723397,
+  "lon": 12.888284
+ },
+ {
+  "nome": "Bellegra",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058012",
+  "lat": 41.881717,
+  "lon": 13.029493
+ },
+ {
+  "nome": "Bracciano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058013",
+  "lat": 42.097973,
+  "lon": 12.154946
+ },
+ {
+  "nome": "Camerata Nuova",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058014",
+  "lat": 41.993172,
+  "lon": 13.145371
+ },
+ {
+  "nome": "Campagnano di Roma",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058015",
+  "lat": 42.129162,
+  "lon": 12.363809
+ },
+ {
+  "nome": "Canale Monterano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058016",
+  "lat": 42.136237,
+  "lon": 12.069583
+ },
+ {
+  "nome": "Canterano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058017",
+  "lat": 41.937144,
+  "lon": 13.041989
+ },
+ {
+  "nome": "Capena",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058018",
+  "lat": 42.124048,
+  "lon": 12.572857
+ },
+ {
+  "nome": "Capranica Prenestina",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058019",
+  "lat": 41.886704,
+  "lon": 12.936542
+ },
+ {
+  "nome": "Carpineto Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058020",
+  "lat": 41.592633,
+  "lon": 13.09825
+ },
+ {
+  "nome": "Casape",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058021",
+  "lat": 41.908977,
+  "lon": 12.888667
+ },
+ {
+  "nome": "Castel Gandolfo",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058022",
+  "lat": 41.740707,
+  "lon": 12.644811
+ },
+ {
+  "nome": "Castel Madama",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058023",
+  "lat": 41.969056,
+  "lon": 12.88197
+ },
+ {
+  "nome": "Castelnuovo di Porto",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058024",
+  "lat": 42.10648,
+  "lon": 12.522265
+ },
+ {
+  "nome": "Castel San Pietro Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058025",
+  "lat": 41.858865,
+  "lon": 12.897557
+ },
+ {
+  "nome": "Cave",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058026",
+  "lat": 41.811439,
+  "lon": 12.934353
+ },
+ {
+  "nome": "Cerreto Laziale",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058027",
+  "lat": 41.948409,
+  "lon": 12.973208
+ },
+ {
+  "nome": "Cervara di Roma",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058028",
+  "lat": 41.983375,
+  "lon": 13.089538
+ },
+ {
+  "nome": "Cerveteri",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058029",
+  "lat": 42.015653,
+  "lon": 12.091207
+ },
+ {
+  "nome": "Ciciliano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058030",
+  "lat": 41.953258,
+  "lon": 12.935118
+ },
+ {
+  "nome": "Cineto Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058031",
+  "lat": 42.05274,
+  "lon": 12.957757
+ },
+ {
+  "nome": "Civitavecchia",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058032",
+  "lat": 42.100937,
+  "lon": 11.803212
+ },
+ {
+  "nome": "Civitella San Paolo",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058033",
+  "lat": 42.187604,
+  "lon": 12.560108
+ },
+ {
+  "nome": "Colleferro",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058034",
+  "lat": 41.723547,
+  "lon": 12.980518
+ },
+ {
+  "nome": "Colonna",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058035",
+  "lat": 41.830126,
+  "lon": 12.752383
+ },
+ {
+  "nome": "Fiano Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058036",
+  "lat": 42.161488,
+  "lon": 12.60343
+ },
+ {
+  "nome": "Filacciano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058037",
+  "lat": 42.260957,
+  "lon": 12.597589
+ },
+ {
+  "nome": "Formello",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058038",
+  "lat": 42.065893,
+  "lon": 12.413336
+ },
+ {
+  "nome": "Frascati",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058039",
+  "lat": 41.832715,
+  "lon": 12.671861
+ },
+ {
+  "nome": "Gallicano nel Lazio",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058040",
+  "lat": 41.877549,
+  "lon": 12.803588
+ },
+ {
+  "nome": "Gavignano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058041",
+  "lat": 41.708736,
+  "lon": 13.06818
+ },
+ {
+  "nome": "Genazzano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058042",
+  "lat": 41.812484,
+  "lon": 12.979187
+ },
+ {
+  "nome": "Genzano di Roma",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058043",
+  "lat": 41.67213,
+  "lon": 12.703127
+ },
+ {
+  "nome": "Gerano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058044",
+  "lat": 41.927287,
+  "lon": 12.989389
+ },
+ {
+  "nome": "Gorga",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058045",
+  "lat": 41.645885,
+  "lon": 13.130744
+ },
+ {
+  "nome": "Grottaferrata",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058046",
+  "lat": 41.788728,
+  "lon": 12.672725
+ },
+ {
+  "nome": "Guidonia Montecelio",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058047",
+  "lat": 41.980525,
+  "lon": 12.701031
+ },
+ {
+  "nome": "Jenne",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058048",
+  "lat": 41.902288,
+  "lon": 13.179072
+ },
+ {
+  "nome": "Labico",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058049",
+  "lat": 41.791458,
+  "lon": 12.867579
+ },
+ {
+  "nome": "Lanuvio",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058050",
+  "lat": 41.647042,
+  "lon": 12.687913
+ },
+ {
+  "nome": "Licenza",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058051",
+  "lat": 42.082109,
+  "lon": 12.897392
+ },
+ {
+  "nome": "Magliano Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058052",
+  "lat": 42.161415,
+  "lon": 12.437687
+ },
+ {
+  "nome": "Mandela",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058053",
+  "lat": 42.043745,
+  "lon": 12.927971
+ },
+ {
+  "nome": "Manziana",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058054",
+  "lat": 42.111418,
+  "lon": 12.105155
+ },
+ {
+  "nome": "Marano Equo",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058055",
+  "lat": 41.989989,
+  "lon": 13.011583
+ },
+ {
+  "nome": "Marcellina",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058056",
+  "lat": 42.012637,
+  "lon": 12.797493
+ },
+ {
+  "nome": "Marino",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058057",
+  "lat": 41.761089,
+  "lon": 12.625226
+ },
+ {
+  "nome": "Mazzano Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058058",
+  "lat": 42.197508,
+  "lon": 12.397736
+ },
+ {
+  "nome": "Mentana",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058059",
+  "lat": 42.045334,
+  "lon": 12.665314
+ },
+ {
+  "nome": "Monte Compatri",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058060",
+  "lat": 41.835572,
+  "lon": 12.731438
+ },
+ {
+  "nome": "Monteflavio",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058061",
+  "lat": 42.111393,
+  "lon": 12.834121
+ },
+ {
+  "nome": "Montelanico",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058062",
+  "lat": 41.64745,
+  "lon": 13.037216
+ },
+ {
+  "nome": "Montelibretti",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058063",
+  "lat": 42.132452,
+  "lon": 12.669698
+ },
+ {
+  "nome": "Monte Porzio Catone",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058064",
+  "lat": 41.814103,
+  "lon": 12.702647
+ },
+ {
+  "nome": "Monterotondo",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058065",
+  "lat": 42.06865,
+  "lon": 12.624802
+ },
+ {
+  "nome": "Montorio Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058066",
+  "lat": 42.139429,
+  "lon": 12.798075
+ },
+ {
+  "nome": "Moricone",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058067",
+  "lat": 42.109146,
+  "lon": 12.736491
+ },
+ {
+  "nome": "Morlupo",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058068",
+  "lat": 42.137624,
+  "lon": 12.504676
+ },
+ {
+  "nome": "Nazzano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058069",
+  "lat": 42.226486,
+  "lon": 12.596442
+ },
+ {
+  "nome": "Nemi",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058070",
+  "lat": 41.713466,
+  "lon": 12.710102
+ },
+ {
+  "nome": "Nerola",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058071",
+  "lat": 42.166808,
+  "lon": 12.76209
+ },
+ {
+  "nome": "Nettuno",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058072",
+  "lat": 41.473192,
+  "lon": 12.697836
+ },
+ {
+  "nome": "Olevano Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058073",
+  "lat": 41.850365,
+  "lon": 13.034268
+ },
+ {
+  "nome": "Palestrina",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058074",
+  "lat": 41.816698,
+  "lon": 12.855503
+ },
+ {
+  "nome": "Palombara Sabina",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058075",
+  "lat": 42.087083,
+  "lon": 12.730653
+ },
+ {
+  "nome": "Percile",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058076",
+  "lat": 42.085009,
+  "lon": 12.924406
+ },
+ {
+  "nome": "Pisoniano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058077",
+  "lat": 41.914055,
+  "lon": 12.962227
+ },
+ {
+  "nome": "Poli",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058078",
+  "lat": 41.885884,
+  "lon": 12.878958
+ },
+ {
+  "nome": "Pomezia",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058079",
+  "lat": 41.671535,
+  "lon": 12.525697
+ },
+ {
+  "nome": "Ponzano Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058080",
+  "lat": 42.269277,
+  "lon": 12.553079
+ },
+ {
+  "nome": "Riano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058081",
+  "lat": 42.078573,
+  "lon": 12.545643
+ },
+ {
+  "nome": "Rignano Flaminio",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058082",
+  "lat": 42.197043,
+  "lon": 12.483563
+ },
+ {
+  "nome": "Riofreddo",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058083",
+  "lat": 42.062591,
+  "lon": 13.001533
+ },
+ {
+  "nome": "Rocca Canterano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058084",
+  "lat": 41.966623,
+  "lon": 13.010096
+ },
+ {
+  "nome": "Rocca di Cave",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058085",
+  "lat": 41.840727,
+  "lon": 12.942098
+ },
+ {
+  "nome": "Rocca di Papa",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058086",
+  "lat": 41.750748,
+  "lon": 12.741982
+ },
+ {
+  "nome": "Roccagiovine",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058087",
+  "lat": 42.051479,
+  "lon": 12.881408
+ },
+ {
+  "nome": "Rocca Priora",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058088",
+  "lat": 41.781103,
+  "lon": 12.789816
+ },
+ {
+  "nome": "Rocca Santo Stefano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058089",
+  "lat": 41.916352,
+  "lon": 13.032543
+ },
+ {
+  "nome": "Roiate",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058090",
+  "lat": 41.863834,
+  "lon": 13.066188
+ },
+ {
+  "nome": "Roma",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058091",
+  "lat": 41.893116,
+  "lon": 12.50685
+ },
+ {
+  "nome": "Roviano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058092",
+  "lat": 42.031243,
+  "lon": 12.988063
+ },
+ {
+  "nome": "Sacrofano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058093",
+  "lat": 42.091639,
+  "lon": 12.45214
+ },
+ {
+  "nome": "Sambuci",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058094",
+  "lat": 41.986081,
+  "lon": 12.932392
+ },
+ {
+  "nome": "San Gregorio da Sassola",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058095",
+  "lat": 41.922931,
+  "lon": 12.861434
+ },
+ {
+  "nome": "San Polo dei Cavalieri",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058096",
+  "lat": 42.042903,
+  "lon": 12.823167
+ },
+ {
+  "nome": "Santa Marinella",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058097",
+  "lat": 42.036024,
+  "lon": 11.929476
+ },
+ {
+  "nome": "Sant'Angelo Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058098",
+  "lat": 42.03342,
+  "lon": 12.702012
+ },
+ {
+  "nome": "Sant'Oreste",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058099",
+  "lat": 42.244272,
+  "lon": 12.527078
+ },
+ {
+  "nome": "San Vito Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058100",
+  "lat": 41.878019,
+  "lon": 12.977652
+ },
+ {
+  "nome": "Saracinesco",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058101",
+  "lat": 42.008692,
+  "lon": 12.950954
+ },
+ {
+  "nome": "Segni",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058102",
+  "lat": 41.693177,
+  "lon": 13.000606
+ },
+ {
+  "nome": "Subiaco",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058103",
+  "lat": 41.935419,
+  "lon": 13.131572
+ },
+ {
+  "nome": "Tivoli",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058104",
+  "lat": 41.963552,
+  "lon": 12.769092
+ },
+ {
+  "nome": "Tolfa",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058105",
+  "lat": 42.137687,
+  "lon": 11.968389
+ },
+ {
+  "nome": "Torrita Tiberina",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058106",
+  "lat": 42.226746,
+  "lon": 12.622332
+ },
+ {
+  "nome": "Trevignano Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058107",
+  "lat": 42.161473,
+  "lon": 12.266892
+ },
+ {
+  "nome": "Vallepietra",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058108",
+  "lat": 41.928377,
+  "lon": 13.232947
+ },
+ {
+  "nome": "Vallinfreda",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058109",
+  "lat": 42.094092,
+  "lon": 12.979655
+ },
+ {
+  "nome": "Valmontone",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058110",
+  "lat": 41.77335,
+  "lon": 12.911082
+ },
+ {
+  "nome": "Velletri",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058111",
+  "lat": 41.64962,
+  "lon": 12.76488
+ },
+ {
+  "nome": "Vicovaro",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058112",
+  "lat": 42.0092,
+  "lon": 12.878053
+ },
+ {
+  "nome": "Vivaro Romano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058113",
+  "lat": 42.113349,
+  "lon": 13.00061
+ },
+ {
+  "nome": "Zagarolo",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058114",
+  "lat": 41.847175,
+  "lon": 12.792427
+ },
+ {
+  "nome": "Lariano",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058115",
+  "lat": 41.726396,
+  "lon": 12.824327
+ },
+ {
+  "nome": "Ladispoli",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058116",
+  "lat": 41.951452,
+  "lon": 12.087845
+ },
+ {
+  "nome": "Ardea",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058117",
+  "lat": 41.617374,
+  "lon": 12.55505
+ },
+ {
+  "nome": "Ciampino",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058118",
+  "lat": 41.794877,
+  "lon": 12.617555
+ },
+ {
+  "nome": "San Cesareo",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058119",
+  "lat": 41.830058,
+  "lon": 12.792903
+ },
+ {
+  "nome": "Fiumicino",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058120",
+  "lat": 41.858519,
+  "lon": 12.247845
+ },
+ {
+  "nome": "Fonte Nuova",
+  "provincia": "Roma",
+  "sigla": "RM",
+  "istat": "058122",
+  "lat": 41.995326,
+  "lon": 12.626658
+ },
+ {
+  "nome": "Aprilia",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059001",
+  "lat": 41.591267,
+  "lon": 12.663496
+ },
+ {
+  "nome": "Bassiano",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059002",
+  "lat": 41.550052,
+  "lon": 13.030563
+ },
+ {
+  "nome": "Campodimele",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059003",
+  "lat": 41.388327,
+  "lon": 13.539977
+ },
+ {
+  "nome": "Castelforte",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059004",
+  "lat": 41.315635,
+  "lon": 13.851451
+ },
+ {
+  "nome": "Cisterna di Latina",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059005",
+  "lat": 41.577785,
+  "lon": 12.837426
+ },
+ {
+  "nome": "Cori",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059006",
+  "lat": 41.658445,
+  "lon": 12.89428
+ },
+ {
+  "nome": "Fondi",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059007",
+  "lat": 41.34185,
+  "lon": 13.390785
+ },
+ {
+  "nome": "Formia",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059008",
+  "lat": 41.282072,
+  "lon": 13.625643
+ },
+ {
+  "nome": "Gaeta",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059009",
+  "lat": 41.22353,
+  "lon": 13.556534
+ },
+ {
+  "nome": "Itri",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059010",
+  "lat": 41.301721,
+  "lon": 13.525029
+ },
+ {
+  "nome": "Latina",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059011",
+  "lat": 41.469889,
+  "lon": 12.845328
+ },
+ {
+  "nome": "Lenola",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059012",
+  "lat": 41.408635,
+  "lon": 13.467546
+ },
+ {
+  "nome": "Maenza",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059013",
+  "lat": 41.550323,
+  "lon": 13.179197
+ },
+ {
+  "nome": "Minturno",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059014",
+  "lat": 41.263209,
+  "lon": 13.740355
+ },
+ {
+  "nome": "Monte San Biagio",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059015",
+  "lat": 41.369276,
+  "lon": 13.316198
+ },
+ {
+  "nome": "Norma",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059016",
+  "lat": 41.602073,
+  "lon": 12.974475
+ },
+ {
+  "nome": "Pontinia",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059017",
+  "lat": 41.400295,
+  "lon": 13.105048
+ },
+ {
+  "nome": "Ponza",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059018",
+  "lat": 40.923557,
+  "lon": 12.924738
+ },
+ {
+  "nome": "Priverno",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059019",
+  "lat": 41.47103,
+  "lon": 13.170132
+ },
+ {
+  "nome": "Prossedi",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059020",
+  "lat": 41.491999,
+  "lon": 13.259395
+ },
+ {
+  "nome": "Roccagorga",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059021",
+  "lat": 41.527564,
+  "lon": 13.125746
+ },
+ {
+  "nome": "Rocca Massima",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059022",
+  "lat": 41.694445,
+  "lon": 12.916287
+ },
+ {
+  "nome": "Roccasecca dei Volsci",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059023",
+  "lat": 41.465418,
+  "lon": 13.229948
+ },
+ {
+  "nome": "Sabaudia",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059024",
+  "lat": 41.336641,
+  "lon": 13.033529
+ },
+ {
+  "nome": "San Felice Circeo",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059025",
+  "lat": 41.254124,
+  "lon": 13.076745
+ },
+ {
+  "nome": "Santi Cosma e Damiano",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059026",
+  "lat": 41.283048,
+  "lon": 13.801647
+ },
+ {
+  "nome": "Sermoneta",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059027",
+  "lat": 41.539378,
+  "lon": 12.965853
+ },
+ {
+  "nome": "Sezze",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059028",
+  "lat": 41.500587,
+  "lon": 13.062572
+ },
+ {
+  "nome": "Sonnino",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059029",
+  "lat": 41.397317,
+  "lon": 13.234581
+ },
+ {
+  "nome": "Sperlonga",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059030",
+  "lat": 41.268661,
+  "lon": 13.444784
+ },
+ {
+  "nome": "Spigno Saturnia",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059031",
+  "lat": 41.320901,
+  "lon": 13.697049
+ },
+ {
+  "nome": "Terracina",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059032",
+  "lat": 41.319311,
+  "lon": 13.204724
+ },
+ {
+  "nome": "Ventotene",
+  "provincia": "Latina",
+  "sigla": "LT",
+  "istat": "059033",
+  "lat": 40.789087,
+  "lon": 13.434014
+ },
+ {
+  "nome": "Acquafondata",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060001",
+  "lat": 41.545926,
+  "lon": 13.978205
+ },
+ {
+  "nome": "Acuto",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060002",
+  "lat": 41.788494,
+  "lon": 13.183989
+ },
+ {
+  "nome": "Alatri",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060003",
+  "lat": 41.726032,
+  "lon": 13.367048
+ },
+ {
+  "nome": "Alvito",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060004",
+  "lat": 41.704569,
+  "lon": 13.752836
+ },
+ {
+  "nome": "Amaseno",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060005",
+  "lat": 41.460749,
+  "lon": 13.338283
+ },
+ {
+  "nome": "Anagni",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060006",
+  "lat": 41.730421,
+  "lon": 13.136914
+ },
+ {
+  "nome": "Aquino",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060007",
+  "lat": 41.474329,
+  "lon": 13.71759
+ },
+ {
+  "nome": "Arce",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060008",
+  "lat": 41.558644,
+  "lon": 13.551005
+ },
+ {
+  "nome": "Arnara",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060009",
+  "lat": 41.583147,
+  "lon": 13.376788
+ },
+ {
+  "nome": "Arpino",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060010",
+  "lat": 41.642493,
+  "lon": 13.632754
+ },
+ {
+  "nome": "Atina",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060011",
+  "lat": 41.625236,
+  "lon": 13.786249
+ },
+ {
+  "nome": "Ausonia",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060012",
+  "lat": 41.352327,
+  "lon": 13.738828
+ },
+ {
+  "nome": "Belmonte Castello",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060013",
+  "lat": 41.579873,
+  "lon": 13.822088
+ },
+ {
+  "nome": "Boville Ernica",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060014",
+  "lat": 41.639696,
+  "lon": 13.472458
+ },
+ {
+  "nome": "Broccostella",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060015",
+  "lat": 41.700652,
+  "lon": 13.649365
+ },
+ {
+  "nome": "Campoli Appennino",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060016",
+  "lat": 41.75101,
+  "lon": 13.712245
+ },
+ {
+  "nome": "Casalattico",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060017",
+  "lat": 41.603436,
+  "lon": 13.728131
+ },
+ {
+  "nome": "Casalvieri",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060018",
+  "lat": 41.648174,
+  "lon": 13.720035
+ },
+ {
+  "nome": "Cassino",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060019",
+  "lat": 41.47466,
+  "lon": 13.835074
+ },
+ {
+  "nome": "Castelliri",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060020",
+  "lat": 41.695915,
+  "lon": 13.53066
+ },
+ {
+  "nome": "Castelnuovo Parano",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060021",
+  "lat": 41.381984,
+  "lon": 13.737461
+ },
+ {
+  "nome": "Castrocielo",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060022",
+  "lat": 41.505242,
+  "lon": 13.690194
+ },
+ {
+  "nome": "Castro dei Volsci",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060023",
+  "lat": 41.501286,
+  "lon": 13.415465
+ },
+ {
+  "nome": "Ceccano",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060024",
+  "lat": 41.574913,
+  "lon": 13.335949
+ },
+ {
+  "nome": "Ceprano",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060025",
+  "lat": 41.54719,
+  "lon": 13.500868
+ },
+ {
+  "nome": "Cervaro",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060026",
+  "lat": 41.476224,
+  "lon": 13.901749
+ },
+ {
+  "nome": "Colfelice",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060027",
+  "lat": 41.529773,
+  "lon": 13.597888
+ },
+ {
+  "nome": "Collepardo",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060028",
+  "lat": 41.770411,
+  "lon": 13.399367
+ },
+ {
+  "nome": "Colle San Magno",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060029",
+  "lat": 41.559504,
+  "lon": 13.704465
+ },
+ {
+  "nome": "Coreno Ausonio",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060030",
+  "lat": 41.336395,
+  "lon": 13.789256
+ },
+ {
+  "nome": "Esperia",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060031",
+  "lat": 41.382709,
+  "lon": 13.661786
+ },
+ {
+  "nome": "Falvaterra",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060032",
+  "lat": 41.503844,
+  "lon": 13.518072
+ },
+ {
+  "nome": "Ferentino",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060033",
+  "lat": 41.714723,
+  "lon": 13.243384
+ },
+ {
+  "nome": "Filettino",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060034",
+  "lat": 41.890677,
+  "lon": 13.32443
+ },
+ {
+  "nome": "Fiuggi",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060035",
+  "lat": 41.808395,
+  "lon": 13.220728
+ },
+ {
+  "nome": "Fontana Liri",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060036",
+  "lat": 41.623754,
+  "lon": 13.575672
+ },
+ {
+  "nome": "Fontechiari",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060037",
+  "lat": 41.676113,
+  "lon": 13.657268
+ },
+ {
+  "nome": "Frosinone",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060038",
+  "lat": 41.636827,
+  "lon": 13.330971
+ },
+ {
+  "nome": "Fumone",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060039",
+  "lat": 41.729565,
+  "lon": 13.268476
+ },
+ {
+  "nome": "Gallinaro",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060040",
+  "lat": 41.659506,
+  "lon": 13.796665
+ },
+ {
+  "nome": "Giuliano di Roma",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060041",
+  "lat": 41.555021,
+  "lon": 13.247511
+ },
+ {
+  "nome": "Guarcino",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060042",
+  "lat": 41.804309,
+  "lon": 13.301397
+ },
+ {
+  "nome": "Isola del Liri",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060043",
+  "lat": 41.69672,
+  "lon": 13.558007
+ },
+ {
+  "nome": "Monte San Giovanni Campano",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060044",
+  "lat": 41.681796,
+  "lon": 13.509965
+ },
+ {
+  "nome": "Morolo",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060045",
+  "lat": 41.633479,
+  "lon": 13.180464
+ },
+ {
+  "nome": "Paliano",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060046",
+  "lat": 41.771729,
+  "lon": 13.060233
+ },
+ {
+  "nome": "Pastena",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060047",
+  "lat": 41.474129,
+  "lon": 13.483796
+ },
+ {
+  "nome": "Patrica",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060048",
+  "lat": 41.589128,
+  "lon": 13.25628
+ },
+ {
+  "nome": "Pescosolido",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060049",
+  "lat": 41.775204,
+  "lon": 13.66499
+ },
+ {
+  "nome": "Picinisco",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060050",
+  "lat": 41.654821,
+  "lon": 13.899179
+ },
+ {
+  "nome": "Pico",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060051",
+  "lat": 41.452256,
+  "lon": 13.563246
+ },
+ {
+  "nome": "Piedimonte San Germano",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060052",
+  "lat": 41.477667,
+  "lon": 13.746255
+ },
+ {
+  "nome": "Piglio",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060053",
+  "lat": 41.824953,
+  "lon": 13.150834
+ },
+ {
+  "nome": "Pignataro Interamna",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060054",
+  "lat": 41.426539,
+  "lon": 13.761113
+ },
+ {
+  "nome": "Pofi",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060055",
+  "lat": 41.549722,
+  "lon": 13.41624
+ },
+ {
+  "nome": "Pontecorvo",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060056",
+  "lat": 41.441666,
+  "lon": 13.640586
+ },
+ {
+  "nome": "Posta Fibreno",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060057",
+  "lat": 41.694865,
+  "lon": 13.686603
+ },
+ {
+  "nome": "Ripi",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060058",
+  "lat": 41.596825,
+  "lon": 13.451785
+ },
+ {
+  "nome": "Rocca d'Arce",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060059",
+  "lat": 41.583689,
+  "lon": 13.611808
+ },
+ {
+  "nome": "Roccasecca",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060060",
+  "lat": 41.544646,
+  "lon": 13.637733
+ },
+ {
+  "nome": "San Biagio Saracinisco",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060061",
+  "lat": 41.612845,
+  "lon": 13.938583
+ },
+ {
+  "nome": "San Donato Val di Comino",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060062",
+  "lat": 41.704548,
+  "lon": 13.803616
+ },
+ {
+  "nome": "San Giorgio a Liri",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060063",
+  "lat": 41.4046,
+  "lon": 13.759151
+ },
+ {
+  "nome": "San Giovanni Incarico",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060064",
+  "lat": 41.50228,
+  "lon": 13.570849
+ },
+ {
+  "nome": "Sant'Ambrogio sul Garigliano",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060065",
+  "lat": 41.389669,
+  "lon": 13.866287
+ },
+ {
+  "nome": "Sant'Andrea del Garigliano",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060066",
+  "lat": 41.36001,
+  "lon": 13.853516
+ },
+ {
+  "nome": "Sant'Apollinare",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060067",
+  "lat": 41.398731,
+  "lon": 13.828537
+ },
+ {
+  "nome": "Sant'Elia Fiumerapido",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060068",
+  "lat": 41.566329,
+  "lon": 13.863042
+ },
+ {
+  "nome": "Santopadre",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060069",
+  "lat": 41.595043,
+  "lon": 13.636254
+ },
+ {
+  "nome": "San Vittore del Lazio",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060070",
+  "lat": 41.467275,
+  "lon": 13.938089
+ },
+ {
+  "nome": "Serrone",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060071",
+  "lat": 41.842984,
+  "lon": 13.089966
+ },
+ {
+  "nome": "Settefrati",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060072",
+  "lat": 41.680042,
+  "lon": 13.863305
+ },
+ {
+  "nome": "Sgurgola",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060073",
+  "lat": 41.674332,
+  "lon": 13.148724
+ },
+ {
+  "nome": "Sora",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060074",
+  "lat": 41.730396,
+  "lon": 13.580365
+ },
+ {
+  "nome": "Strangolagalli",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060075",
+  "lat": 41.589972,
+  "lon": 13.497989
+ },
+ {
+  "nome": "Supino",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060076",
+  "lat": 41.606848,
+  "lon": 13.209154
+ },
+ {
+  "nome": "Terelle",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060077",
+  "lat": 41.551018,
+  "lon": 13.783421
+ },
+ {
+  "nome": "Torre Cajetani",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060078",
+  "lat": 41.79017,
+  "lon": 13.263211
+ },
+ {
+  "nome": "Torrice",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060079",
+  "lat": 41.626669,
+  "lon": 13.389424
+ },
+ {
+  "nome": "Trevi nel Lazio",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060080",
+  "lat": 41.873436,
+  "lon": 13.260249
+ },
+ {
+  "nome": "Trivigliano",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060081",
+  "lat": 41.763022,
+  "lon": 13.266654
+ },
+ {
+  "nome": "Vallecorsa",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060082",
+  "lat": 41.439425,
+  "lon": 13.397618
+ },
+ {
+  "nome": "Vallemaio",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060083",
+  "lat": 41.369111,
+  "lon": 13.813047
+ },
+ {
+  "nome": "Vallerotonda",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060084",
+  "lat": 41.580309,
+  "lon": 13.945731
+ },
+ {
+  "nome": "Veroli",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060085",
+  "lat": 41.712716,
+  "lon": 13.452314
+ },
+ {
+  "nome": "Vicalvi",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060086",
+  "lat": 41.676552,
+  "lon": 13.709541
+ },
+ {
+  "nome": "Vico nel Lazio",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060087",
+  "lat": 41.799322,
+  "lon": 13.377182
+ },
+ {
+  "nome": "Villa Latina",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060088",
+  "lat": 41.607326,
+  "lon": 13.855007
+ },
+ {
+  "nome": "Villa Santa Lucia",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060089",
+  "lat": 41.488539,
+  "lon": 13.779299
+ },
+ {
+  "nome": "Villa Santo Stefano",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060090",
+  "lat": 41.506719,
+  "lon": 13.314901
+ },
+ {
+  "nome": "Viticuso",
+  "provincia": "Frosinone",
+  "sigla": "FR",
+  "istat": "060091",
+  "lat": 41.522761,
+  "lon": 13.988184
+ }
+]
