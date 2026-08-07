@@ -1,1 +1,378 @@
 data,comune,provincia,rischio
+2026-08-07,Acquapendente,VT,Alto
+2026-08-07,Arlena di Castro,VT,Alto
+2026-08-07,Bagnoregio,VT,Alto
+2026-08-07,Barbarano Romano,VT,Alto
+2026-08-07,Bassano Romano,VT,Alto
+2026-08-07,Bassano in Teverina,VT,Alto
+2026-08-07,Blera,VT,Alto
+2026-08-07,Bolsena,VT,Moderato
+2026-08-07,Bomarzo,VT,Alto
+2026-08-07,Calcata,VT,Alto
+2026-08-07,Canepina,VT,Moderato
+2026-08-07,Canino,VT,Alto
+2026-08-07,Capodimonte,VT,Alto
+2026-08-07,Capranica,VT,Alto
+2026-08-07,Caprarola,VT,Alto
+2026-08-07,Carbognano,VT,Alto
+2026-08-07,Castel Sant'Elia,VT,Alto
+2026-08-07,Castiglione in Teverina,VT,Alto
+2026-08-07,Celleno,VT,Alto
+2026-08-07,Cellere,VT,Alto
+2026-08-07,Civita Castellana,VT,Alto
+2026-08-07,Civitella d'Agliano,VT,Alto
+2026-08-07,Corchiano,VT,Alto
+2026-08-07,Fabrica di Roma,VT,Alto
+2026-08-07,Faleria,VT,Alto
+2026-08-07,Farnese,VT,Alto
+2026-08-07,Gallese,VT,Alto
+2026-08-07,Gradoli,VT,Alto
+2026-08-07,Graffignano,VT,Alto
+2026-08-07,Grotte di Castro,VT,Alto
+2026-08-07,Ischia di Castro,VT,Alto
+2026-08-07,Latera,VT,Alto
+2026-08-07,Lubriano,VT,Alto
+2026-08-07,Marta,VT,Alto
+2026-08-07,Montalto di Castro,VT,Alto
+2026-08-07,Montefiascone,VT,Moderato
+2026-08-07,Monte Romano,VT,Alto
+2026-08-07,Monterosi,VT,Alto
+2026-08-07,Nepi,VT,Alto
+2026-08-07,Onano,VT,Alto
+2026-08-07,Oriolo Romano,VT,Alto
+2026-08-07,Orte,VT,Alto
+2026-08-07,Piansano,VT,Alto
+2026-08-07,Proceno,VT,Alto
+2026-08-07,Ronciglione,VT,Alto
+2026-08-07,Villa San Giovanni in Tuscia,VT,Alto
+2026-08-07,San Lorenzo Nuovo,VT,Alto
+2026-08-07,Soriano nel Cimino,VT,Alto
+2026-08-07,Sutri,VT,Alto
+2026-08-07,Tarquinia,VT,Alto
+2026-08-07,Tessennano,VT,Alto
+2026-08-07,Tuscania,VT,Alto
+2026-08-07,Valentano,VT,Alto
+2026-08-07,Vallerano,VT,Alto
+2026-08-07,Vasanello,VT,Alto
+2026-08-07,Vejano,VT,Alto
+2026-08-07,Vetralla,VT,Alto
+2026-08-07,Vignanello,VT,Alto
+2026-08-07,Viterbo,VT,Alto
+2026-08-07,Vitorchiano,VT,Alto
+2026-08-07,Accumoli,RI,Moderato
+2026-08-07,Amatrice,RI,Basso
+2026-08-07,Antrodoco,RI,Moderato
+2026-08-07,Ascrea,RI,Moderato
+2026-08-07,Belmonte in Sabina,RI,Alto
+2026-08-07,Borbona,RI,Moderato
+2026-08-07,Borgorose,RI,Moderato
+2026-08-07,Borgo Velino,RI,Moderato
+2026-08-07,Cantalice,RI,Moderato
+2026-08-07,Cantalupo in Sabina,RI,Alto
+2026-08-07,Casaprota,RI,Alto
+2026-08-07,Casperia,RI,Moderato
+2026-08-07,Castel di Tora,RI,Moderato
+2026-08-07,Castelnuovo di Farfa,RI,Alto
+2026-08-07,Castel Sant'Angelo,RI,Moderato
+2026-08-07,Cittaducale,RI,Moderato
+2026-08-07,Cittareale,RI,Moderato
+2026-08-07,Collalto Sabino,RI,Alto
+2026-08-07,Colle di Tora,RI,Moderato
+2026-08-07,Collegiove,RI,Moderato
+2026-08-07,Collevecchio,RI,Alto
+2026-08-07,Colli sul Velino,RI,Alto
+2026-08-07,Concerviano,RI,Alto
+2026-08-07,Configni,RI,Alto
+2026-08-07,Contigliano,RI,Moderato
+2026-08-07,Cottanello,RI,Alto
+2026-08-07,Fara in Sabina,RI,Alto
+2026-08-07,Fiamignano,RI,Moderato
+2026-08-07,Forano,RI,Alto
+2026-08-07,Frasso Sabino,RI,Alto
+2026-08-07,Greccio,RI,Alto
+2026-08-07,Labro,RI,Alto
+2026-08-07,Leonessa,RI,Moderato
+2026-08-07,Longone Sabino,RI,Alto
+2026-08-07,Magliano Sabina,RI,Alto
+2026-08-07,Marcetelli,RI,Moderato
+2026-08-07,Micigliano,RI,Moderato
+2026-08-07,Mompeo,RI,Alto
+2026-08-07,Montasola,RI,Moderato
+2026-08-07,Montebuono,RI,Alto
+2026-08-07,Monteleone Sabino,RI,Alto
+2026-08-07,Montenero Sabino,RI,Moderato
+2026-08-07,Monte San Giovanni in Sabina,RI,Moderato
+2026-08-07,Montopoli di Sabina,RI,Alto
+2026-08-07,Morro Reatino,RI,Moderato
+2026-08-07,Nespolo,RI,Moderato
+2026-08-07,Orvinio,RI,Moderato
+2026-08-07,Paganico Sabino,RI,Moderato
+2026-08-07,Pescorocchiano,RI,Moderato
+2026-08-07,Petrella Salto,RI,Moderato
+2026-08-07,Poggio Bustone,RI,Moderato
+2026-08-07,Poggio Catino,RI,Alto
+2026-08-07,Poggio Mirteto,RI,Alto
+2026-08-07,Poggio Moiano,RI,Moderato
+2026-08-07,Poggio Nativo,RI,Alto
+2026-08-07,Poggio San Lorenzo,RI,Alto
+2026-08-07,Posta,RI,Moderato
+2026-08-07,Pozzaglia Sabina,RI,Moderato
+2026-08-07,Rieti,RI,Alto
+2026-08-07,Rivodutri,RI,Moderato
+2026-08-07,Roccantica,RI,Moderato
+2026-08-07,Rocca Sinibalda,RI,Moderato
+2026-08-07,Salisano,RI,Alto
+2026-08-07,Scandriglia,RI,Alto
+2026-08-07,Selci,RI,Alto
+2026-08-07,Stimigliano,RI,Alto
+2026-08-07,Tarano,RI,Alto
+2026-08-07,Toffia,RI,Alto
+2026-08-07,Torricella in Sabina,RI,Alto
+2026-08-07,Torri in Sabina,RI,Alto
+2026-08-07,Turania,RI,Moderato
+2026-08-07,Vacone,RI,Alto
+2026-08-07,Varco Sabino,RI,Moderato
+2026-08-07,Affile,RM,Alto
+2026-08-07,Agosta,RM,Moderato
+2026-08-07,Albano Laziale,RM,Alto
+2026-08-07,Allumiere,RM,Alto
+2026-08-07,Anguillara Sabazia,RM,Alto
+2026-08-07,Anticoli Corrado,RM,Moderato
+2026-08-07,Anzio,RM,Alto
+2026-08-07,Arcinazzo Romano,RM,Moderato
+2026-08-07,Ariccia,RM,Alto
+2026-08-07,Arsoli,RM,Moderato
+2026-08-07,Artena,RM,Alto
+2026-08-07,Bellegra,RM,Alto
+2026-08-07,Bracciano,RM,Alto
+2026-08-07,Camerata Nuova,RM,Moderato
+2026-08-07,Campagnano di Roma,RM,Alto
+2026-08-07,Canale Monterano,RM,Alto
+2026-08-07,Canterano,RM,Alto
+2026-08-07,Capena,RM,Alto
+2026-08-07,Capranica Prenestina,RM,Moderato
+2026-08-07,Carpineto Romano,RM,Moderato
+2026-08-07,Casape,RM,Moderato
+2026-08-07,Castel Gandolfo,RM,Alto
+2026-08-07,Castel Madama,RM,Alto
+2026-08-07,Castelnuovo di Porto,RM,Alto
+2026-08-07,Castel San Pietro Romano,RM,Alto
+2026-08-07,Cave,RM,Alto
+2026-08-07,Cerreto Laziale,RM,Alto
+2026-08-07,Cervara di Roma,RM,Moderato
+2026-08-07,Cerveteri,RM,Alto
+2026-08-07,Ciciliano,RM,Alto
+2026-08-07,Cineto Romano,RM,Moderato
+2026-08-07,Civitavecchia,RM,Alto
+2026-08-07,Civitella San Paolo,RM,Alto
+2026-08-07,Colleferro,RM,Alto
+2026-08-07,Colonna,RM,Alto
+2026-08-07,Fiano Romano,RM,Alto
+2026-08-07,Filacciano,RM,Alto
+2026-08-07,Formello,RM,Alto
+2026-08-07,Frascati,RM,Alto
+2026-08-07,Gallicano nel Lazio,RM,Alto
+2026-08-07,Gavignano,RM,Alto
+2026-08-07,Genazzano,RM,Alto
+2026-08-07,Genzano di Roma,RM,Alto
+2026-08-07,Gerano,RM,Alto
+2026-08-07,Gorga,RM,Moderato
+2026-08-07,Grottaferrata,RM,Alto
+2026-08-07,Guidonia Montecelio,RM,Alto
+2026-08-07,Jenne,RM,Moderato
+2026-08-07,Labico,RM,Alto
+2026-08-07,Lanuvio,RM,Alto
+2026-08-07,Licenza,RM,Alto
+2026-08-07,Magliano Romano,RM,Alto
+2026-08-07,Mandela,RM,Alto
+2026-08-07,Manziana,RM,Alto
+2026-08-07,Marano Equo,RM,Moderato
+2026-08-07,Marcellina,RM,Alto
+2026-08-07,Marino,RM,Alto
+2026-08-07,Mazzano Romano,RM,Alto
+2026-08-07,Mentana,RM,Alto
+2026-08-07,Monte Compatri,RM,Alto
+2026-08-07,Monteflavio,RM,Moderato
+2026-08-07,Montelanico,RM,Alto
+2026-08-07,Montelibretti,RM,Alto
+2026-08-07,Monte Porzio Catone,RM,Alto
+2026-08-07,Monterotondo,RM,Alto
+2026-08-07,Montorio Romano,RM,Alto
+2026-08-07,Moricone,RM,Alto
+2026-08-07,Morlupo,RM,Alto
+2026-08-07,Nazzano,RM,Alto
+2026-08-07,Nemi,RM,Alto
+2026-08-07,Nerola,RM,Alto
+2026-08-07,Nettuno,RM,Alto
+2026-08-07,Olevano Romano,RM,Alto
+2026-08-07,Palestrina,RM,Alto
+2026-08-07,Palombara Sabina,RM,Alto
+2026-08-07,Percile,RM,Alto
+2026-08-07,Pisoniano,RM,Alto
+2026-08-07,Poli,RM,Alto
+2026-08-07,Pomezia,RM,Alto
+2026-08-07,Ponzano Romano,RM,Alto
+2026-08-07,Riano,RM,Alto
+2026-08-07,Rignano Flaminio,RM,Alto
+2026-08-07,Riofreddo,RM,Moderato
+2026-08-07,Rocca Canterano,RM,Alto
+2026-08-07,Rocca di Cave,RM,Alto
+2026-08-07,Rocca di Papa,RM,Moderato
+2026-08-07,Roccagiovine,RM,Moderato
+2026-08-07,Rocca Priora,RM,Alto
+2026-08-07,Rocca Santo Stefano,RM,Alto
+2026-08-07,Roiate,RM,Alto
+2026-08-07,Roma,RM,Alto
+2026-08-07,Roviano,RM,Moderato
+2026-08-07,Sacrofano,RM,Alto
+2026-08-07,Sambuci,RM,Alto
+2026-08-07,San Gregorio da Sassola,RM,Alto
+2026-08-07,San Polo dei Cavalieri,RM,Moderato
+2026-08-07,Santa Marinella,RM,Alto
+2026-08-07,Sant'Angelo Romano,RM,Alto
+2026-08-07,Sant'Oreste,RM,Alto
+2026-08-07,San Vito Romano,RM,Alto
+2026-08-07,Saracinesco,RM,Alto
+2026-08-07,Segni,RM,Alto
+2026-08-07,Subiaco,RM,Moderato
+2026-08-07,Tivoli,RM,Alto
+2026-08-07,Tolfa,RM,Alto
+2026-08-07,Torrita Tiberina,RM,Alto
+2026-08-07,Trevignano Romano,RM,Alto
+2026-08-07,Vallepietra,RM,Moderato
+2026-08-07,Vallinfreda,RM,Alto
+2026-08-07,Valmontone,RM,Alto
+2026-08-07,Velletri,RM,Alto
+2026-08-07,Vicovaro,RM,Alto
+2026-08-07,Vivaro Romano,RM,Alto
+2026-08-07,Zagarolo,RM,Alto
+2026-08-07,Lariano,RM,Alto
+2026-08-07,Ladispoli,RM,Alto
+2026-08-07,Ardea,RM,Alto
+2026-08-07,Ciampino,RM,Alto
+2026-08-07,San Cesareo,RM,Alto
+2026-08-07,Fiumicino,RM,Alto
+2026-08-07,Fonte Nuova,RM,Alto
+2026-08-07,Aprilia,LT,Alto
+2026-08-07,Bassiano,LT,Moderato
+2026-08-07,Campodimele,LT,Moderato
+2026-08-07,Castelforte,LT,Alto
+2026-08-07,Cisterna di Latina,LT,Alto
+2026-08-07,Cori,LT,Alto
+2026-08-07,Fondi,LT,Alto
+2026-08-07,Formia,LT,Alto
+2026-08-07,Gaeta,LT,Alto
+2026-08-07,Itri,LT,Alto
+2026-08-07,Latina,LT,Alto
+2026-08-07,Lenola,LT,Alto
+2026-08-07,Maenza,LT,Moderato
+2026-08-07,Minturno,LT,Alto
+2026-08-07,Monte San Biagio,LT,Alto
+2026-08-07,Norma,LT,Alto
+2026-08-07,Pontinia,LT,Alto
+2026-08-07,Priverno,LT,Alto
+2026-08-07,Prossedi,LT,Alto
+2026-08-07,Roccagorga,LT,Alto
+2026-08-07,Rocca Massima,LT,Alto
+2026-08-07,Roccasecca dei Volsci,LT,Alto
+2026-08-07,Sabaudia,LT,Alto
+2026-08-07,San Felice Circeo,LT,Alto
+2026-08-07,Santi Cosma e Damiano,LT,Alto
+2026-08-07,Sermoneta,LT,Alto
+2026-08-07,Sezze,LT,Alto
+2026-08-07,Sonnino,LT,Alto
+2026-08-07,Sperlonga,LT,Alto
+2026-08-07,Spigno Saturnia,LT,Alto
+2026-08-07,Terracina,LT,Alto
+2026-08-07,Ventotene,LT,Alto
+2026-08-07,Acquafondata,FR,Moderato
+2026-08-07,Acuto,FR,Alto
+2026-08-07,Alatri,FR,Alto
+2026-08-07,Alvito,FR,Moderato
+2026-08-07,Amaseno,FR,Alto
+2026-08-07,Anagni,FR,Alto
+2026-08-07,Aquino,FR,Alto
+2026-08-07,Arce,FR,Alto
+2026-08-07,Arnara,FR,Alto
+2026-08-07,Arpino,FR,Alto
+2026-08-07,Atina,FR,Moderato
+2026-08-07,Ausonia,FR,Alto
+2026-08-07,Belmonte Castello,FR,Moderato
+2026-08-07,Boville Ernica,FR,Alto
+2026-08-07,Broccostella,FR,Alto
+2026-08-07,Campoli Appennino,FR,Basso
+2026-08-07,Casalattico,FR,Moderato
+2026-08-07,Casalvieri,FR,Alto
+2026-08-07,Cassino,FR,Alto
+2026-08-07,Castelliri,FR,Alto
+2026-08-07,Castelnuovo Parano,FR,Alto
+2026-08-07,Castrocielo,FR,Alto
+2026-08-07,Castro dei Volsci,FR,Alto
+2026-08-07,Ceccano,FR,Alto
+2026-08-07,Ceprano,FR,Alto
+2026-08-07,Cervaro,FR,Alto
+2026-08-07,Colfelice,FR,Alto
+2026-08-07,Collepardo,FR,Moderato
+2026-08-07,Colle San Magno,FR,Moderato
+2026-08-07,Coreno Ausonio,FR,Alto
+2026-08-07,Esperia,FR,Alto
+2026-08-07,Falvaterra,FR,Alto
+2026-08-07,Ferentino,FR,Alto
+2026-08-07,Filettino,FR,Basso
+2026-08-07,Fiuggi,FR,Moderato
+2026-08-07,Fontana Liri,FR,Alto
+2026-08-07,Fontechiari,FR,Alto
+2026-08-07,Frosinone,FR,Alto
+2026-08-07,Fumone,FR,Alto
+2026-08-07,Gallinaro,FR,Alto
+2026-08-07,Giuliano di Roma,FR,Alto
+2026-08-07,Guarcino,FR,Moderato
+2026-08-07,Isola del Liri,FR,Alto
+2026-08-07,Monte San Giovanni Campano,FR,Alto
+2026-08-07,Morolo,FR,Moderato
+2026-08-07,Paliano,FR,Alto
+2026-08-07,Pastena,FR,Alto
+2026-08-07,Patrica,FR,Alto
+2026-08-07,Pescosolido,FR,Basso
+2026-08-07,Picinisco,FR,Moderato
+2026-08-07,Pico,FR,Alto
+2026-08-07,Piedimonte San Germano,FR,Alto
+2026-08-07,Piglio,FR,Moderato
+2026-08-07,Pignataro Interamna,FR,Alto
+2026-08-07,Pofi,FR,Alto
+2026-08-07,Pontecorvo,FR,Alto
+2026-08-07,Posta Fibreno,FR,Alto
+2026-08-07,Ripi,FR,Alto
+2026-08-07,Rocca d'Arce,FR,Alto
+2026-08-07,Roccasecca,FR,Alto
+2026-08-07,San Biagio Saracinisco,FR,Moderato
+2026-08-07,San Donato Val di Comino,FR,Moderato
+2026-08-07,San Giorgio a Liri,FR,Alto
+2026-08-07,San Giovanni Incarico,FR,Alto
+2026-08-07,Sant'Ambrogio sul Garigliano,FR,Alto
+2026-08-07,Sant'Andrea del Garigliano,FR,Alto
+2026-08-07,Sant'Apollinare,FR,Alto
+2026-08-07,Sant'Elia Fiumerapido,FR,Alto
+2026-08-07,Santopadre,FR,Moderato
+2026-08-07,San Vittore del Lazio,FR,Alto
+2026-08-07,Serrone,FR,Alto
+2026-08-07,Settefrati,FR,Moderato
+2026-08-07,Sgurgola,FR,Alto
+2026-08-07,Sora,FR,Moderato
+2026-08-07,Strangolagalli,FR,Alto
+2026-08-07,Supino,FR,Moderato
+2026-08-07,Terelle,FR,Moderato
+2026-08-07,Torre Cajetani,FR,Moderato
+2026-08-07,Torrice,FR,Alto
+2026-08-07,Trevi nel Lazio,FR,Moderato
+2026-08-07,Trivigliano,FR,Alto
+2026-08-07,Vallecorsa,FR,Alto
+2026-08-07,Vallemaio,FR,Alto
+2026-08-07,Vallerotonda,FR,Moderato
+2026-08-07,Veroli,FR,Moderato
+2026-08-07,Vicalvi,FR,Alto
+2026-08-07,Vico nel Lazio,FR,Moderato
+2026-08-07,Villa Latina,FR,Moderato
+2026-08-07,Villa Santa Lucia,FR,Alto
+2026-08-07,Villa Santo Stefano,FR,Alto
+2026-08-07,Viticuso,FR,Moderato
